@@ -1,0 +1,7 @@
+Testo di prova che verrà copiato da:
+serverTCP_file.c
+
+e che verrà incollato in un nuovo file da:
+clientTCP_file.c
+
+con il nome del file "testo.txt" -> "testo2.txt"

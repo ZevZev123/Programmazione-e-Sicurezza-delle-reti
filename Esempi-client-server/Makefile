@@ -1,0 +1,87 @@
+# Variabili principali
+CC = gcc
+CFLAGS = -lpthread
+
+# File sorgenti principali
+CLIENT_SRC = network.c clientTCP.c
+SERVER_SRC = network.c serverTCP.c
+
+# File sorgenti aggiuntivi
+CLIENT_CHAR_SRC = network.c clientTCPChar.c
+SERVER_CHAR_SRC = network.c serverTCPChar.c
+CLIENT_IO_SRC = network.c clientTCPIO.c
+SERVER_IO_SRC = network.c serverTCPIO.c
+CLIENT_UDP_SRC = network.c clientUDP.c
+SERVER_UDP_SRC = network.c serverUDP.c
+CLIENT_UDP_INC_SRC = network.c clientUDP_inc.c
+SERVER_UDP_INC_SRC = network.c serverUDP_inc.c
+CLIENT_UDP_INC_SUM_SRC = network.c clientUDP_inc_sum.c
+SERVER_UDP_INC_SUM_SRC = network.c serverUDP_inc_sum.c
+
+# File di output
+OUTPUT_DIR = output
+CLIENT_OUT = $(OUTPUT_DIR)/clientTCP
+SERVER_OUT = $(OUTPUT_DIR)/serverTCP
+CLIENT_CHAR_OUT = $(OUTPUT_DIR)/clientTCPChar
+SERVER_CHAR_OUT = $(OUTPUT_DIR)/serverTCPChar
+CLIENT_IO_OUT = $(OUTPUT_DIR)/clientTCPIO
+SERVER_IO_OUT = $(OUTPUT_DIR)/serverTCPIO
+CLIENT_UDP_OUT = $(OUTPUT_DIR)/clientUDP
+SERVER_UDP_OUT = $(OUTPUT_DIR)/serverUDP
+CLIENT_UDP_INC_OUT = $(OUTPUT_DIR)/clientUDP_inc
+SERVER_UDP_INC_OUT = $(OUTPUT_DIR)/serverUDP_inc
+CLIENT_UDP_INC_SUM_OUT = $(OUTPUT_DIR)/clientUDP_inc_sum
+SERVER_UDP_INC_SUM_OUT = $(OUTPUT_DIR)/serverUDP_inc_sum
+
+# Regola di default
+all: $(CLIENT_OUT) $(SERVER_OUT) $(CLIENT_CHAR_OUT) $(SERVER_CHAR_OUT) \
+     $(CLIENT_IO_OUT) $(SERVER_IO_OUT) $(CLIENT_UDP_OUT) $(SERVER_UDP_OUT) \
+     $(CLIENT_UDP_INC_OUT) $(SERVER_UDP_INC_OUT) $(CLIENT_UDP_INC_SUM_OUT) \
+	 $(SERVER_UDP_INC_SUM_OUT)
+
+# Regole di compilazione
+$(CLIENT_OUT): $(CLIENT_SRC)
+	$(CC) $(CLIENT_SRC) -o $(CLIENT_OUT) $(CFLAGS)
+
+$(SERVER_OUT): $(SERVER_SRC)
+	$(CC) $(SERVER_SRC) -o $(SERVER_OUT) $(CFLAGS)
+
+$(CLIENT_CHAR_OUT): $(CLIENT_CHAR_SRC)
+	$(CC) $(CLIENT_CHAR_SRC) -o $(CLIENT_CHAR_OUT) $(CFLAGS)
+
+$(SERVER_CHAR_OUT): $(SERVER_CHAR_SRC)
+	$(CC) $(SERVER_CHAR_SRC) -o $(SERVER_CHAR_OUT) $(CFLAGS)
+
+$(CLIENT_IO_OUT): $(CLIENT_IO_SRC)
+	$(CC) $(CLIENT_IO_SRC) -o $(CLIENT_IO_OUT) $(CFLAGS)
+
+$(SERVER_IO_OUT): $(SERVER_IO_SRC)
+	$(CC) $(SERVER_IO_SRC) -o $(SERVER_IO_OUT) $(CFLAGS)
+
+$(CLIENT_UDP_OUT): $(CLIENT_UDP_SRC)
+	$(CC) $(CLIENT_UDP_SRC) -o $(CLIENT_UDP_OUT) $(CFLAGS)
+
+$(SERVER_UDP_OUT): $(SERVER_UDP_SRC)
+	$(CC) $(SERVER_UDP_SRC) -o $(SERVER_UDP_OUT) $(CFLAGS)
+
+$(CLIENT_UDP_INC_OUT): $(CLIENT_UDP_INC_SRC)
+	$(CC) $(CLIENT_UDP_INC_SRC) -o $(CLIENT_UDP_INC_OUT) $(CFLAGS)
+
+$(SERVER_UDP_INC_OUT): $(SERVER_UDP_INC_SRC)
+	$(CC) $(SERVER_UDP_INC_SRC) -o $(SERVER_UDP_INC_OUT) $(CFLAGS)
+
+$(CLIENT_UDP_INC_SUM_OUT): $(CLIENT_UDP_INC_SUM_SRC)
+	$(CC) $(CLIENT_UDP_INC_SUM_SRC) -o $(CLIENT_UDP_INC_SUM_OUT) $(CFLAGS)
+
+$(SERVER_UDP_INC_SUM_OUT): $(SERVER_UDP_INC_SUM_SRC)
+	$(CC) $(SERVER_UDP_INC_SUM_SRC) -o $(SERVER_UDP_INC_SUM_OUT) $(CFLAGS)
+
+# Pulizia dei file generati
+clean:
+	rm -f $(CLIENT_OUT) $(SERVER_OUT) $(CLIENT_CHAR_OUT) $(SERVER_CHAR_OUT) \
+	      $(CLIENT_IO_OUT) $(SERVER_IO_OUT) $(CLIENT_UDP_OUT) $(SERVER_UDP_OUT) \
+	      $(CLIENT_UDP_INC_OUT) $(SERVER_UDP_INC_OUT) $(CLIENT_UDP_INC_SUM_OUT) \
+		  $(SERVER_UDP_INC_SUM_OUT)
+
+# Regola per ricompilare tutto
+rebuild: clean all
