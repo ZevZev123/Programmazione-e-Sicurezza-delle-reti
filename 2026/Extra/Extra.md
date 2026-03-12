@@ -1,13 +1,13 @@
-<h1>Termini tecnici</h1>
+# Termini tecnici
 **PDU** (Protocol Data Unit) di livello *<livello ISO/OSI>*
 Il PDU è composto da Header e payload
 
-<h1>Metodi di trasmissione</h1>
+# Metodi di trasmissione
 La trasmissione avviene sempre da un solo mittente<br>**UNICAST**         = 1 destinatario
 **MULTICAST**    = gruppo di destinatari
 **BROADCAST**   = tutti i destinatari della rete
 
-<h1>ARP</h1>
+# ARP
 ARP è un protocollo di mappatura utilizzato a livello data-link (MAC) e network (IP) che serve per ottenere l'indirizzo MAC di un host partendo dal suo IP.
 
 *Come funziona?*
