@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d14f7462f386b3fa",
+            "id": "f6c28094d0dc2830",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -16,8 +16,8 @@
                 "file": "2026/wireshark-analisi-rete/analisi-rete.pdf",
                 "page": 14,
                 "left": -8,
-                "top": 737,
-                "zoom": 1.9210084033613446
+                "top": 645,
+                "zoom": 1.9210084033613448
               },
               "icon": "lucide-file-text",
               "title": "analisi-rete"
@@ -49,6 +49,16 @@
               },
               "icon": "lucide-file",
               "title": "Extra"
+            }
+          },
+          {
+            "id": "d14f7462f386b3fa",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista grafo"
             }
           }
         ]
@@ -217,10 +227,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d14f7462f386b3fa",
+  "active": "f6c28094d0dc2830",
   "lastOpenFiles": [
-    "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/wireshark-analisi-rete/analisi-rete.pdf",
+    "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/Extra/Extra.md",
     "2026/wireshark-analisi-rete/Img/Es01.05.png",
     "2026/wireshark-analisi-rete/Img/Es01.04.png",
