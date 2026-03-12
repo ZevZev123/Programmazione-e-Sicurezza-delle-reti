@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1773309693967,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1773309709030,
+          "path": "2026/wireshark-analisi-rete/simpleHTTP.cap"
+        },
+        {
+          "type": "file",
+          "ctime": 1773309719402,
+          "path": "2026/wireshark-analisi-rete/pingCapture.cap"
+        },
+        {
+          "type": "file",
+          "ctime": 1773309724596,
+          "path": "2026/wireshark-analisi-rete/busyNetwork.cap"
+        },
+        {
+          "type": "file",
+          "ctime": 1773309729314,
+          "path": "2026/wireshark-analisi-rete/capture.cap"
+        }
+      ],
+      "title": "cap"
+    }
+  ]
+}

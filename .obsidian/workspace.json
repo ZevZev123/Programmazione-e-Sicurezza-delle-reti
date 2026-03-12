@@ -16,15 +16,15 @@
                 "file": "2026/wireshark-analisi-rete/analisi-rete.pdf",
                 "page": 13,
                 "left": -8,
-                "top": 381,
-                "zoom": 1.9210084033613448
+                "top": 252,
+                "zoom": 1.9210084033613446
               },
               "icon": "lucide-file-text",
               "title": "analisi-rete"
             }
           },
           {
-            "id": "c883ecfae199a72f",
+            "id": "ea1ed6121b38a145",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,9 +36,22 @@
               "icon": "lucide-file",
               "title": "Soluzioni"
             }
+          },
+          {
+            "id": "dcf65fa8fb9e72b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026/Extra/Extra.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Extra"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -201,15 +214,24 @@
       "obsidian-git:Open Git source control": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false,
-      "omnisearch:Omnisearch": false
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c883ecfae199a72f",
+  "active": "d14f7462f386b3fa",
   "lastOpenFiles": [
-    "2026/wireshark-analisi-rete/analisi-rete.pdf",
     "2026/wireshark-analisi-rete/Soluzioni.md",
+    "2026/wireshark-analisi-rete/analisi-rete.pdf",
+    "2026/Extra/Extra.md",
+    "2026/wireshark-analisi-rete/Img/Es01.05.png",
+    "2026/wireshark-analisi-rete/Img/Es01.04.png",
+    "Senza nome.md",
+    "2025/WebSocket_Chat/node_modules/engine.io/node_modules/debug/README.md",
+    "screenshot.png.md",
+    "().md",
+    "2026/Extra",
+    "2026/wireshark-analisi-rete/Img/Es01.03.png",
     "2026/wireshark-analisi-rete/Img/Es01.02.png",
+    "Pasted image 20260310194328.png",
     "2026/wireshark-analisi-rete/Img/Es01.01.png",
     "2026/wireshark-analisi-rete/Img",
     "2026/wireshark-analisi-rete/Es01.01.png",
