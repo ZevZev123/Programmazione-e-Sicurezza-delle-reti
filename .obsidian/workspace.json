@@ -14,9 +14,9 @@
               "type": "pdf",
               "state": {
                 "file": "2026/wireshark-analisi-rete/analisi-rete.pdf",
-                "page": 14,
+                "page": 15,
                 "left": -8,
-                "top": 69,
+                "top": 556,
                 "zoom": 1.9210084033613448
               },
               "icon": "lucide-file-text",
@@ -31,7 +31,8 @@
               "state": {
                 "file": "2026/wireshark-analisi-rete/Soluzioni.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "Soluzioni"
@@ -51,7 +52,8 @@
               "title": "Extra"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -217,10 +219,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "f6c28094d0dc2830",
+  "active": "76f05f1d4ead1216",
   "lastOpenFiles": [
-    "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/wireshark-analisi-rete/analisi-rete.pdf",
+    "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/Extra/Extra.md",
     "2026/Extra/Img/Es.04.png",
     "2026/Extra/Img/Es.03.png",

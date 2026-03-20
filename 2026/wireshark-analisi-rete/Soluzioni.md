@@ -55,7 +55,7 @@ Sono tanti perché durante l'analisi della rete stava avvenendo una mappatura de
 
 ### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=14&selection=43,0,43,11&color=note|Esercizio 2]]
 
-1. Per colorare i pacchetti [[Extra#TCP|TCP]] e [[Extra#UDP|UDP]] di verde e rosso bisogna andare nel menù <code>Visualizza</code> di Wireshark, poi nel sottomenù <code>Regole di colorazione</code>. Nella nuova pagina selezionare i pacchetti <code>tcp</code> e impostare il colore verde come sfondo, per i pacchetti <code>udp</code> impostare il colore rosso.
+1. Per colorare i pacchetti [[Extra#TCP|TCP]] e [[Extra#UDP|UDP]] di verde e rosso bisogna andare nel menù <code>Visualizza</code> di Wireshark, poi nel sotto-menù <code>Regole di colorazione</code>. Nella nuova pagina selezionare i pacchetti <code>tcp</code> e impostare il colore verde come sfondo, per i pacchetti <code>udp</code> impostare il colore rosso.
 <p style="text-align:center;"><code>Wireshark > Visualizza > Regole di colorazione</code></p>
 
 2. Frame 1:
@@ -110,3 +110,88 @@ possiamo leggere l'intera conversazione tra il client e il server.
 Nel payload troviamo in rosso le richieste GET del client e in blu le relative risposte dal server che condivide i dati della pagina web richiesta. 
 
 ### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=15&selection=0,0,0,11&color=note|Esercizio 3]]
+1. Protocolli di livello applicazione ordinati per protocolli di livello trasporto:
+I pacchetti che navigano in sessione UDP sono tutti DNS.
+TCP:
+* FTP
+* HTTP
+* SSH
+Per trovarli ho usato i filtri <code>udp</code> e <code>tcp</code>. Per quelli TCP ho ordinato per Protocol invece che Numero per avere una visualizzazione più facile.
+
+2. Comando usato:
+<p style="text-align:center;"><code>Tasto destro su pacchetto > Segui > Flusso TCP</code></p>
+Esempi su protocolli applicazione diversi:
+FTP contiene comandi per il trasferimento. HTTP contiene le funzioni GET delle pagine e le risposte in chiaro. SSH contiene informazioni cifrate. Poi ci sono anche i pacchetti che non hanno un protocollo di livello applicazione ma sono TCP e sono usati per handshake, ACK e chiusura connessione.
+
+3. Nel protocollo FTP i dati non sono criptati perché è un protocollo in chiaro. Seguendo il flusso si può leggere tutto il contenuto.
+Il protocollo SSH, a differenza del FTP, è un protocollo cifrato. Seguendo il flusso i dati non sono leggibili perché cifrati.
+
+### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=15&selection=27,0,27,11&color=note|Esercizio 4]]
+1. Per filtrare solo i pacchetti ping si usa il filtro: <code>icmp</code> ([[Extra#ICMP|ICMP]])
+I pacchetti presenti sono 22 / 3215, ovvero il 0.7%
+Filtri con caratteristiche extra:
+- <code>icmp.type == 8</code> per i ping richieste
+- <code>icmp.type == 0</code> per i ping risposte (pong)
+Per ciascuna variante ci sono 11 / 3215 pacchetti
+
+2. L'indirizzo IP sorgente è: <code>216.58.211.196</code>
+L'indirizzo IP destinazione è: <code>157.27.143.46</code>
+Con il comando <code>whois 157.27.143.46</code>, il dato che ci interessa è <code>org-name:       Universita' degli Studi di Verona</code>.
+Con il comando <code>whois 216.58.211.196</code>, il risultato è <code>OrgName:        Google LLC</code>
+
+3. Il comando per trovare l'indirizzo IP del gateway è:
+<p style="text-align:center"><code>❯ ip -4 route</code></p>
+Oppure con l'alias (o su windows):
+<p style="text-align:center"><code>❯ ipconfig</code></p>
+L'output è:
+```default via <b>157.27.128.1</b> dev wlan0 proto dhcp src 157.27.157.98 metric 600<br>```
+```157.27.128.0/19 dev wlan0 proto kernel scope link src 157.27.157.98 metric 600```
+L'IP del gateway è <code><b>157.27.128.1</b></code>:
+
+Comando per fare il ping al sito www.google.com:
+<p style="text-align:center"><code>❯ ping www.google.com</code></p>
+Per forzare l'utilizzo di IPv4:
+<p style="text-align:center"><code>❯ ping -4 www.google.com</code></p>
+
+```
+❯ ping -c 5 www.google.com<br>
+PING www.google.com (142.251.153.119) 56(84) bytes of data.
+64 bytes from 142.251.153.119: icmp_seq=1 ttl=116 time=14.6 ms
+64 bytes from 142.251.153.119: icmp_seq=2 ttl=116 time=16.2 ms
+64 bytes from 142.251.153.119: icmp_seq=3 ttl=116 time=14.4 ms
+64 bytes from 142.251.153.119: icmp_seq=4 ttl=116 time=18.5 ms
+64 bytes from 142.251.153.119: icmp_seq=5 ttl=116 time=15.7 ms 
+```
+La media del RTT (Round Trip Time) è <code><b>15.88 ms</b></code>.
+
+```
+❯ ping -c 5 157.27.128.1
+PING 157.27.128.1 (157.27.128.1) 56(84) bytes of data.
+64 bytes from 157.27.128.1: icmp_seq=1 ttl=254 time=10.7 ms
+64 bytes from 157.27.128.1: icmp_seq=2 ttl=254 time=11.0 ms
+64 bytes from 157.27.128.1: icmp_seq=3 ttl=254 time=3.72 ms
+64 bytes from 157.27.128.1: icmp_seq=4 ttl=254 time=12.8 ms
+64 bytes from 157.27.128.1: icmp_seq=5 ttl=254 time=3.49 ms
+```
+La media del RTT (Round Trip Time) è <code><b>8.34 ms</b></code>.
+
+La media verso il gateway è più bassa perché guardando la topologia di rete il gateway è più vicino al computer sorgente del ping.
+
+### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=15&selection=66,0,66,11&color=note|Esercizio 5]]
+1. Il comando <code>❯ traceroute ww.google.com</code> mostra ogni singolo salto (router) che il pacchetto attraversa dal computer sorgente al destinatario.
+```
+❯ traceroute -4 www.google.com
+traceroute to www.google.com (142.250.181.164), 30 hops max, 60 byte packets
+ 1  _gateway (157.27.128.1)  4.195 ms  4.114 ms  4.097 ms
+ 2  10.252.10.1 (10.252.10.1)  4.080 ms  4.065 ms  4.050 ms
+ 3  ru-univr-l1-rl1-vr00.vr00.garr.net (193.204.218.109)  4.029 ms  5.002 ms  4.987 ms
+ 4  * * *
+ 5  rs1-mi01-re1-mi02.mi02.garr.net (185.191.180.158)  7.853 ms  7.839 ms  6.674 ms
+ 6  142.250.164.230 (142.250.164.230)  7.121 ms  19.671 ms  19.575 ms
+ 7  192.178.104.103 (192.178.104.103)  19.560 ms 192.178.104.191 (192.178.104.191)  19.542 ms 192.178.104.103 (192.178.104.103)  19.532 ms
+ 8  108.170.232.180 (108.170.232.180)  19.514 ms 192.178.82.62 (192.178.82.62)  19.499 ms 142.251.235.179 (142.251.235.179)  12.312 ms
+ 9  108.170.255.204 (108.170.255.204)  11.120 ms pnmila-ak-in-f4.1e100.net (142.250.181.164)  12.242 ms 108.170.255.204 (108.170.255.204)  11.084 ms
+```
+2. Nomi organizzazioni dei router attraversati e trovati:
+- <code>157.27.128.1</code> -> <code>org-name:       Universita' degli Studi di Verona</code>
+- 
