@@ -194,4 +194,41 @@ traceroute to www.google.com (142.250.181.164), 30 hops max, 60 byte packets
 ```
 2. Nomi organizzazioni dei router attraversati e trovati:
 - <code>157.27.128.1</code> -> <code>org-name:       Universita' degli Studi di Verona</code>
-- 
+- 10.252.10.1 -> indirizzo privato nella rete universitaria
+- 193.204.218.109 -> <code>org-name: Consortium GARR</code>
+- 185.191.180.158 -> <code>org-name: Consortium GARR</code>
+- 142.250.164.230 -> <code>org-name: Google LLC</code>
+- 192.178.104.103 -> <code>org-name: Google LLC</code>
+- 108.170.232.180 -> <code>org-name: Google LLC</code>
+- 142.250.181.164 -> <code>org-name: Google LLC</code>
+
+### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=15&selection=85,0,85,11&color=note|Esercizio 6]]
+1. Con il comando <code>ipconfig</code> (su arch <code>ip -4 a</code>) vedo quali sono le interfacce attive sul computer. Risultato:
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    inet 157.27.142.13/19 brd 157.27.159.255 scope global dynamic noprefixroute wlan0
+       valid_lft 2018sec preferred_lft 2018sec
+```
+La prima è l'interfaccia di [[Extra#Loopback|loopback]] (<code>lo</code>):
+- IP 127.0.0.1
+- netmask (/8) 255.0.0.0
+La seconda è l'interfaccia <code>wlan0</code> (connessa al wifi):
+- IP 157.27.142.13
+- netmask (/19) 255.255.224.0 .
+
+2. L'indiritto IP di www.univr.it è 157.27.3.60.
+Trovato usando il comando: <code>❯ nslookup www.univr.it</code> . Risultato:
+``` 
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+www.univr.it	canonical name = aol.univr.it.
+Name:	aol.univr.it
+Address: 157.27.3.60
+Name:	aol.univr.it
+Address: 2001:760:2204:103::60 
+```

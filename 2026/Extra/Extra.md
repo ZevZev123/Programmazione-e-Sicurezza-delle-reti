@@ -61,3 +61,5 @@ Il DNS (Domain Name System) è un protocollo che permette di trasformare un domi
 # UDP
 
 # ICMP
+
+# Loopback
