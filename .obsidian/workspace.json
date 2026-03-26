@@ -4,17 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "b0e09b9b995e1f2f",
+        "id": "6b63e5f73866a5dd",
         "type": "tabs",
+        "dimension": 59.11513859275054,
+        "children": [
+          {
+            "id": "dace06a2eff1897d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
+                "page": 31,
+                "left": -16,
+                "top": 131,
+                "zoom": 0.9988020833333333
+              },
+              "icon": "lucide-file-text",
+              "title": "Lab-ApplicazioniReteSocket"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fc90e9b1a9cb94f4",
+        "type": "tabs",
+        "dimension": 40.88486140724947,
         "children": [
           {
             "id": "bef0470d505e7401",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista grafo"
+              "type": "markdown",
+              "state": {
+                "file": "2026/Socket/Soluzioni.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Soluzioni"
             }
           }
         ]
@@ -170,8 +198,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
+      "switcher:Apri selezione rapida": false,
       "canvas:Crea nuova lavagna": false,
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
@@ -185,18 +213,19 @@
   },
   "active": "bef0470d505e7401",
   "lastOpenFiles": [
-    "2026/Socket/Soluzioni.md",
-    "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
+    "2026/Web/web-webservices.pdf",
+    "2026/Web/Esempi-web/sommatrice-web.html",
+    "2026/Web/Esempi-web/form-get.html",
+    "2026/Web/Esempi-web/network.h",
+    "2026/Web/Esempi-web/serverHTTP.c",
+    "2026/Web/Esempi-web/network.c",
+    "2026/Web/Esempi-web/serverHTTP-CGI.c",
+    "2026/Web/Esempi-web/javascript-load.html",
+    "2026/Web/Esempi-web/javascript-timer2.html",
+    "2026/Web/Esempi-web/javascript-evento.html",
+    "2026/Web/Esempi-web/javascript-timer.html",
     "2026/wireshark-analisi-rete/Soluzioni.md",
-    "2026/Socket/Esempi-client-server/bin/serverUDP_inc",
-    "2026/Socket/Esempi-client-server/bin/serverUDP",
-    "2026/Socket/Esempi-client-server/bin/serverTCPIO",
-    "2026/Socket/Esempi-client-server/bin/serverTCPChar",
-    "2026/Socket/Esempi-client-server/bin/serverTCP",
-    "2026/Socket/Esempi-client-server/bin/fileCopy",
-    "2026/Socket/Esempi-client-server/bin/clientUDP_inc",
-    "2026/Socket/Esempi-client-server/bin/clientUDP",
-    "2026/Socket/Esempi-client-server/bin/clientTCPIO",
+    "2026/Socket/Soluzioni.md",
     "2026/Extra/Extra.md",
     "2026/Extra/Img/Es.04.png",
     "2026/Extra/Img/Es.03.png",
