@@ -8,17 +8,19 @@ int main(void) {
     int port;
     
     socket = createUDPInterface(20000);
-     
-    printf("Inserisci un numero intero:\n");
     
-    scanf("%d", &request);
-    
-    UDPSend(socket, &request, sizeof(request), "127.0.0.1", 35000);
-     
+    printf("Il programma terminera' inserendo uno 0 (zero)\n");
+    while (true){
+        printf("Inserisci un numero intero:\n");   
+        scanf("%d", &request);
+        
+        UDPSend(socket, &request, sizeof(request), "127.0.0.1", 35000);
+        if (request == 0) break;
+    }
+
     UDPReceive(socket, &response, sizeof(response), hostAddress, &port);
-     
+
     printf("[CLIENT] Ho ricevuto un messaggio da host/porta %s/%d\n", hostAddress, port);
-    
     printf("[CLIENT] Contenuto: %d\n", response);
 }
 

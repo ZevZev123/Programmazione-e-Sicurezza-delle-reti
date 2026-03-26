@@ -9,10 +9,10 @@ int main(void) {
     
     socket = createUDPInterface(10000);
     
-    while(true) {
+    for (int i = 5; i > 0; i--) { 
     
-        printf("[SERVER] Sono in attesa di richieste da qualche client\n");
-    
+        printf("[SERVER] Sono in attesa di massimo 5 richieste da qualche client\n");
+        printf("Pacchetto %d\n",i);
         UDPReceive(socket, request, MTU, hostAddress, &port);
     
         printf("[SERVER] Ho ricevuto un messaggio da host/porta %s/%d\n", hostAddress, port);

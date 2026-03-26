@@ -6,7 +6,7 @@
       {
         "id": "6b63e5f73866a5dd",
         "type": "tabs",
-        "dimension": 59.11513859275054,
+        "dimension": 52.982233502538065,
         "children": [
           {
             "id": "dace06a2eff1897d",
@@ -15,10 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
-                "page": 31,
-                "left": -16,
-                "top": 131,
-                "zoom": 0.9988020833333333
+                "page": 36,
+                "left": -20,
+                "top": 163,
+                "zoom": 0.7398883928571428
               },
               "icon": "lucide-file-text",
               "title": "Lab-ApplicazioniReteSocket"
@@ -29,7 +29,7 @@
       {
         "id": "fc90e9b1a9cb94f4",
         "type": "tabs",
-        "dimension": 40.88486140724947,
+        "dimension": 47.01776649746193,
         "children": [
           {
             "id": "bef0470d505e7401",
@@ -77,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Soluzioni",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -213,6 +212,11 @@
   },
   "active": "bef0470d505e7401",
   "lastOpenFiles": [
+    "client-server/serverUPD_inc.c.md",
+    "2026/Socket/Soluzioni.md",
+    "client-server",
+    "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
+    "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/Web/web-webservices.pdf",
     "2026/Web/Esempi-web/sommatrice-web.html",
     "2026/Web/Esempi-web/form-get.html",
@@ -221,11 +225,6 @@
     "2026/Web/Esempi-web/network.c",
     "2026/Web/Esempi-web/serverHTTP-CGI.c",
     "2026/Web/Esempi-web/javascript-load.html",
-    "2026/Web/Esempi-web/javascript-timer2.html",
-    "2026/Web/Esempi-web/javascript-evento.html",
-    "2026/Web/Esempi-web/javascript-timer.html",
-    "2026/wireshark-analisi-rete/Soluzioni.md",
-    "2026/Socket/Soluzioni.md",
     "2026/Extra/Extra.md",
     "2026/Extra/Img/Es.04.png",
     "2026/Extra/Img/Es.03.png",

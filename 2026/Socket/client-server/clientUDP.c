@@ -11,7 +11,7 @@ int main(void) {
     
     printf("[CLIENT] Spedisco messaggio al server\n");
     printf("[CLIENT] Contenuto: %s\n", request);
-    UDPSend(socket, request, strlen(request), "pippo", 10000);
+    UDPSend(socket, request, strlen(request), "localhost", 10000);
      
     UDPReceive(socket, response, MTU, hostAddress, &port);
     printf("[CLIENT] Ho ricevuto un messaggio da host/porta %s/%d\n", hostAddress, port);

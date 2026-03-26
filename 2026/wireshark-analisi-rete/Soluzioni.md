@@ -7,7 +7,7 @@ tags:
 
 1. Il livello data-link usato è Ethernet II.
 Wireshark capisce che è Ethernet II perché la scheda di rete, quando cattura un segnale dal cavo, manda sempre anche un **modulo informativo** (creato dai driver Npcap).
-Questa informazione dice a Wireshark "Encapsulation type: Ethernet (1)", il codice 1 secondo lo standard identifica che è stata utilizzata la strada Ethernet.	
+Questa informazione dice a Wireshark `Encapsulation type: Ethernet (1)`, il codice 1 secondo lo standard identifica che è stata utilizzata la strada Ethernet.	
 
 <p style="text-align:center;"><img src="Img/Es01.01.png" alt="es01.01.png" width="600"/></p>
 
@@ -15,7 +15,7 @@ Questa informazione dice a Wireshark "Encapsulation type: Ethernet (1)", il codi
 <p style="text-align:center;"><img src="Img/Es01.02.png" alt="es01.02.png" width="600"/></p>
 
 Destination/source = chi riceve e chi manda il messaggio
-Type = nel pacchetto 9 contiene il codice `0x0800` che è l'identificativo del protocollo ipv4
+Type = nel pacchetto 9 contiene il codice `0x0800` che è l'identificativo del protocollo IPv4
 
 3. Il MAC sorgente si trova nel Source dell'header ed è: 00:e0:81:24:dd:64 .
 Il MAC sorgente è di tipo unicast, è impossibile che un pacchetto sia inviato in broadcast.
@@ -56,7 +56,7 @@ Sono tanti perché durante l'analisi della rete stava avvenendo una mappatura de
 ### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=14&selection=43,0,43,11&color=note|Esercizio 2]]
 
 1. Per colorare i pacchetti [[Extra#TCP|TCP]] e [[Extra#UDP|UDP]] di verde e rosso bisogna andare nel menù `Visualizza` di Wireshark, poi nel sotto-menù `Regole di colorazione`. Nella nuova pagina selezionare i pacchetti `tcp` e impostare il colore verde come sfondo, per i pacchetti `udp` impostare il colore rosso.
-<p style="text-align:center;">`Wireshark > Visualizza > Regole di colorazione`</p>
+<p style="text-align:center;"><code>Wireshark > Visualizza > Regole di colorazione</code></p>
 
 2. Frame 1:
 <table>
@@ -92,9 +92,9 @@ Da questo pacchetto capiamo che la richiesta al DNS è andata a buon fine e ora 
 </table>
 I tre pacchetti prima di questo fanno parte del [[Extra#Three way handshake|Three way handshake]] che serve instaurare una connessione [[Extra#TCP|TCP]] verso il server.
 Le flag dei 3 pacchetti sono:
-- `<b>0x002 (SYN)</b>` richiesta di connessione da parte del client
-- `<b>0x012 (SYN, ACK)</b>` conferma di connessione dal server
-- `<b>0x010 (ACK)</b>` conferma di connessione dal client
+- **`0x002 (SYN)`** richiesta di connessione da parte del client
+- **`0x012 (SYN, ACK)`** conferma di connessione dal server
+- **`0x010 (ACK)`** conferma di connessione dal client
 
 5. Filtro per vedere solo i pacchetti TCP (compresi HTTP): `tcp`
 Dopo aver applicato il filtro vengono visualizzati 807 / 823 pacchetti, ovvero il 98.1%
@@ -105,7 +105,7 @@ Questi pacchetti comprendono tutti i messaggi di Three way handshake, di conferm
 Se il protocollo DNS avesse usato una connessione TCP si sarebbero aggiunti 3 pacchetti per aprire la connessione, i pacchetti di conferma per domanda e risposta e 3-4 per la chiusura della **sessione**. In questo caso usare una connessione TCP non sarebbe stato utile perché i messaggi di domanda e risposta del DNS sono molto piccoli e usare il protocollo TCP avrebbe creato latenza elevata per un carico di traffico inutile.
 
 7. Usando il seguente comando sul terzo pacchetto
-<p style="text-align:center;">`Tasto destro > Segui > Flusso TCP`</p>
+<p style="text-align:center;"><code>Tasto destro > Segui > Flusso TCP</code></p>
 possiamo leggere l'intera conversazione tra il client e il server.
 Nel payload troviamo in rosso le richieste GET del client e in blu le relative risposte dal server che condivide i dati della pagina web richiesta. 
 
@@ -119,7 +119,7 @@ TCP:
 Per trovarli ho usato i filtri `udp` e `tcp`. Per quelli TCP ho ordinato per Protocol invece che Numero per avere una visualizzazione più facile.
 
 2. Comando usato:
-<p style="text-align:center;">`Tasto destro su pacchetto > Segui > Flusso TCP`</p>
+<p style="text-align:center;"><code>Tasto destro su pacchetto > Segui > Flusso TCP</code></p>
 Esempi su protocolli applicazione diversi:
 FTP contiene comandi per il trasferimento. HTTP contiene le funzioni GET delle pagine e le risposte in chiaro. SSH contiene informazioni cifrate. Poi ci sono anche i pacchetti che non hanno un protocollo di livello applicazione ma sono TCP e sono usati per handshake, ACK e chiusura connessione.
 
@@ -136,25 +136,23 @@ Per ciascuna variante ci sono 11 / 3215 pacchetti
 
 2. L'indirizzo IP sorgente è: `216.58.211.196`
 L'indirizzo IP destinazione è: `157.27.143.46`
-Con il comando `whois 157.27.143.46`, il dato che ci interessa è `org-name:       Universita' degli Studi di Verona`.
-Con il comando `whois 216.58.211.196`, il risultato è `OrgName:        Google LLC`
+Con il comando `whois 157.27.143.46`, il dato che ci interessa è `org-name: Universita' degli Studi di Verona`.
+Con il comando `whois 216.58.211.196`, il risultato è `OrgName: Google LLC`
 
 3. Il comando per trovare l'indirizzo IP del gateway è:
-<p style="text-align:center">`❯ ip -4 route`</p>
+<p style="text-align:center"><code>❯ ip -4 route</code></p>
 Oppure con l'alias (o su windows):
-<p style="text-align:center">`❯ ipconfig`</p>
-L'output è:
-```default via <b>157.27.128.1</b> dev wlan0 proto dhcp src 157.27.157.98 metric 600<br>```
-```157.27.128.0/19 dev wlan0 proto kernel scope link src 157.27.157.98 metric 600```
-L'IP del gateway è `<b>157.27.128.1</b>`:
+<p style="text-align:center"><code>❯ ipconfig</code></p>
+L'output è:<br><code>default via <b>157.27.128.1</b> dev wlan0 proto dhcp src 157.27.157.98 metric 600</code><br><code>157.27.128.0/19 dev wlan0 proto kernel scope link src 157.27.157.98 metric 600</code>
+L'IP del gateway è <b>157.27.128.1</b>:
 
 Comando per fare il ping al sito www.google.com:
-<p style="text-align:center">`❯ ping www.google.com`</p>
+<p style="text-align:center"><code>❯ ping www.google.com</code></p>
 Per forzare l'utilizzo di IPv4:
-<p style="text-align:center">`❯ ping -4 www.google.com`</p>
+<p style="text-align:center"><code>❯ ping -4 www.google.com</code></p>
 
-```
-❯ ping -c 5 www.google.com<br>
+```bash
+❯ ping -c 5 www.google.com
 PING www.google.com (142.251.153.119) 56(84) bytes of data.
 64 bytes from 142.251.153.119: icmp_seq=1 ttl=116 time=14.6 ms
 64 bytes from 142.251.153.119: icmp_seq=2 ttl=116 time=16.2 ms
@@ -162,9 +160,9 @@ PING www.google.com (142.251.153.119) 56(84) bytes of data.
 64 bytes from 142.251.153.119: icmp_seq=4 ttl=116 time=18.5 ms
 64 bytes from 142.251.153.119: icmp_seq=5 ttl=116 time=15.7 ms 
 ```
-La media del RTT (Round Trip Time) è `<b>15.88 ms</b>`.
+La media del RTT (Round Trip Time) è **`15.88 ms`**.
 
-```
+```bash
 ❯ ping -c 5 157.27.128.1
 PING 157.27.128.1 (157.27.128.1) 56(84) bytes of data.
 64 bytes from 157.27.128.1: icmp_seq=1 ttl=254 time=10.7 ms
@@ -173,13 +171,13 @@ PING 157.27.128.1 (157.27.128.1) 56(84) bytes of data.
 64 bytes from 157.27.128.1: icmp_seq=4 ttl=254 time=12.8 ms
 64 bytes from 157.27.128.1: icmp_seq=5 ttl=254 time=3.49 ms
 ```
-La media del RTT (Round Trip Time) è `<b>8.34 ms</b>`.
+La media del RTT (Round Trip Time) è **`8.34 ms`**.
 
 La media verso il gateway è più bassa perché guardando la topologia di rete il gateway è più vicino al computer sorgente del ping.
 
 ### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=15&selection=66,0,66,11&color=note|Esercizio 5]]
 1. Il comando `❯ traceroute ww.google.com` mostra ogni singolo salto (router) che il pacchetto attraversa dal computer sorgente al destinatario.
-```
+```bash
 ❯ traceroute -4 www.google.com
 traceroute to www.google.com (142.250.181.164), 30 hops max, 60 byte packets
  1  _gateway (157.27.128.1)  4.195 ms  4.114 ms  4.097 ms
@@ -193,7 +191,7 @@ traceroute to www.google.com (142.250.181.164), 30 hops max, 60 byte packets
  9  108.170.255.204 (108.170.255.204)  11.120 ms pnmila-ak-in-f4.1e100.net (142.250.181.164)  12.242 ms 108.170.255.204 (108.170.255.204)  11.084 ms
 ```
 2. Nomi organizzazioni dei router attraversati e trovati:
-- `157.27.128.1` -> `org-name:       Universita' degli Studi di Verona`
+- `157.27.128.1` -> `org-name: Universita' degli Studi di Verona`
 - 10.252.10.1 -> indirizzo privato nella rete universitaria
 - 193.204.218.109 -> `org-name: Consortium GARR`
 - 185.191.180.158 -> `org-name: Consortium GARR`
@@ -204,7 +202,7 @@ traceroute to www.google.com (142.250.181.164), 30 hops max, 60 byte packets
 
 ### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=15&selection=85,0,85,11&color=note|Esercizio 6]]
 1. Con il comando `ipconfig` (su arch `ip -4 a`) vedo quali sono le interfacce attive sul computer. Risultato:
-```
+```bash
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
@@ -214,14 +212,14 @@ traceroute to www.google.com (142.250.181.164), 30 hops max, 60 byte packets
 ```
 La prima è l'interfaccia di [[Extra#Loopback|loopback]] (`lo`):
 - IP 127.0.0.1
-- netmask (/8) 255.0.0.0
+- netmask **(/8)** 255.0.0.0
 La seconda è l'interfaccia `wlan0` (connessa al wifi):
 - IP 157.27.142.13
-- netmask (/19) 255.255.224.0 .
+- netmask **(/19)** 255.255.224.0 .
 
-2. L'indiritto IP di www.univr.it è 157.27.3.60.
+2. L'indirizzo IP di www.univr.it è 157.27.3.60.
 Trovato usando il comando: `❯ nslookup www.univr.it` . Risultato:
-``` 
+``` bash
 Server:		127.0.0.53
 Address:	127.0.0.53#53
 
