@@ -6,6 +6,7 @@
       {
         "id": "ff42ae3cf692de49",
         "type": "tabs",
+        "dimension": 58.742004264392314,
         "children": [
           {
             "id": "1df63a5774bdb2fb",
@@ -14,10 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "2026/Web/web-webservices.pdf",
-                "page": 9,
-                "left": -22,
-                "top": 253,
-                "zoom": 0.6954761904761904
+                "page": 30,
+                "left": -19,
+                "top": 68,
+                "zoom": 0.825877976190476
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -28,6 +29,7 @@
       {
         "id": "1034504d53910ea9",
         "type": "tabs",
+        "dimension": 41.257995735607686,
         "children": [
           {
             "id": "832a7f5c2e6ec3ac",
@@ -213,16 +215,16 @@
   "lastOpenFiles": [
     "2026/Web/web-webservices.pdf",
     "2026/Web/Soluzioni.md",
+    "2026/Web/web/serverHTTP.c",
+    "2026/Web/Esempi-web/serverHTTP",
+    "2026/Web/web/javascript-load.html",
+    "2026/Web/web",
     "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
     "2026/Socket/Soluzioni.md",
     "2026/Socket/client-server/bin/260331.pdf",
     "2026/Socket/client-server/bin/serverUDP_inc",
     "2026/Socket/client-server/bin/serverUDP",
     "2026/Socket/client-server/bin/serverTCPsum",
-    "2026/Socket/client-server/bin/serverTCPIO",
-    "2026/Socket/client-server/bin/serverTCPChar",
-    "2026/Socket/client-server/bin/serverTCP",
-    "2026/Socket/client-server/bin/fileCopy",
     "client-server/serverUPD_inc.c.md",
     "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/Extra/Extra.md",
