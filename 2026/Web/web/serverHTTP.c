@@ -1,48 +1,54 @@
 #include "network.h"
 
 int main(){
-    char *HTMLResponse = "HTTP/1.1 200 OK\r\n\r\n<html><head><title>An Example Page</title></head><body>Hello World, this is a very simple HTML document.</body></html>\r\n";
+    char *HTMLDefault = "HTTP/1.1 200 OK\r\n\r\n<html><head><title>An Example Page</title></head><body><h3>Cerca nella URL un file</h3><br>La scelta attuale non esiste</html>\r\n";
+    char *HTMLError = "HTTP/1.1 200 OK\r\n\r\n<html><body>La pagina che cerchi non esiste</body></html>";
+    char *HTMLHeader = "HTTP/1.1 200 OK\r\n\r\n";
+
     socketif_t sockfd;
-    FILE* connfd;
-    int res, i;
-    long length=0;
-    char request[MTU], method[10], c;
     
     sockfd = createTCPServer(8000);
-    if (sockfd < 0){
-        printf("[SERVER] Errore: %i\n", sockfd);
-        return -1;
-    }
+    if (sockfd < 0) return -1;
     
     while(true) {
-        connfd = acceptConnectionFD(sockfd);
+        FILE *connfd = acceptConnectionFD(sockfd);
+        char request[MTU], path_buffer[256] = {0};
         
-        fgets(request, sizeof(request), connfd);
-        printf("%s", request);
-        strcpy(method,strtok(request," "));
-        while(request[0]!='\r') {
-            fgets(request, sizeof(request), connfd);
-            printf("%s", request);
-            if(strstr(request, "Content-Length:")!=NULL)  {
-                length = atol(request+15);
-                //printf("length %ld\n", length);
+        // Leggi solo la prima riga e fai il parsing immediato
+        if (fgets(request, sizeof(request), connfd)) {
+            strtok(request, " ");          // Salta il metodo (GET/POST)
+            char *p = strtok(NULL, " ");   // Prendi il path
+            
+            if (p) {
+                if (p[0] == '/') p++;      // Salta lo slash
+                strcpy(path_buffer, p);    // Salva il path prima di svuotare
+           }
+        }
+
+        // Svuota il resto degli header HTTP
+        while(fgets(request, sizeof(request), connfd) != NULL && request[0] != '\r' && request[0] != '\n');
+        
+        printf("path: %s\n", path_buffer);
+
+        // logica di risposta
+        if (path_buffer[0] == '\0') {
+            fputs(HTMLDefault, connfd);
+        } else {
+            FILE *fptr = fopen(path_buffer, "r");
+            if (fptr) {
+                fputs(HTMLHeader, connfd);
+                char c;
+                while((c = fgetc(fptr)) != EOF) fputc(c, connfd);
+                fclose(fptr);
+            } else {
+                fputs(HTMLError, connfd);
             }
         }
-        
-        if(strcmp(method, "POST")==0)  {
-            for(i=0; i<length; i++)  {
-                c = fgetc(connfd);
-                printf("%c", c);
-            }
-        }
-        
-        fputs(HTMLResponse, connfd);
-        fclose(connfd);
-                
+
+        fclose(connfd);                
         printf("\n\n[SERVER] sessione HTTP completata\n\n");
     }
     
     closeConnection(sockfd);
     return 0;
 }
-

@@ -6,7 +6,7 @@
       {
         "id": "ff42ae3cf692de49",
         "type": "tabs",
-        "dimension": 58.742004264392314,
+        "dimension": 57.30277185501066,
         "children": [
           {
             "id": "1df63a5774bdb2fb",
@@ -15,10 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "2026/Web/web-webservices.pdf",
-                "page": 30,
-                "left": -19,
-                "top": 68,
-                "zoom": 0.825877976190476
+                "page": 36,
+                "left": -16,
+                "top": 449,
+                "zoom": 0.966674107142857
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -29,7 +29,7 @@
       {
         "id": "1034504d53910ea9",
         "type": "tabs",
-        "dimension": 41.257995735607686,
+        "dimension": 42.69722814498934,
         "children": [
           {
             "id": "832a7f5c2e6ec3ac",
@@ -103,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -215,33 +216,33 @@
   "lastOpenFiles": [
     "2026/Web/web-webservices.pdf",
     "2026/Web/Soluzioni.md",
-    "2026/Web/web/serverHTTP.c",
-    "2026/Web/Esempi-web/serverHTTP",
-    "2026/Web/web/javascript-load.html",
-    "2026/Web/web",
     "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
+    "2026/Web/web/fileCopy.c",
+    "2026/Socket/client-server/bin/provaincollata.txt",
+    "2026/Socket/client-server/bin/prova.txt",
     "2026/Socket/Soluzioni.md",
-    "2026/Socket/client-server/bin/260331.pdf",
-    "2026/Socket/client-server/bin/serverUDP_inc",
-    "2026/Socket/client-server/bin/serverUDP",
-    "2026/Socket/client-server/bin/serverTCPsum",
-    "client-server/serverUPD_inc.c.md",
+    "2026/Web/web/esempio-parser",
+    "2026/Web/web/esempio-parser.c",
+    "2026/Web/web/css.html",
+    "2026/Web/web/serverHTTP",
+    "2026/Web/web/network.h",
+    "2026/Web/Img/wireshark-02.png",
+    "2026/Web/Img/wireshark-01.png",
+    "2026/Web/wireshark-01.png",
+    "2026/Web/wireshark-02.png",
     "2026/wireshark-analisi-rete/Soluzioni.md",
+    "2026/Web/wireshark.png",
+    "client-server/serverUPD_inc.c.md",
     "2026/Extra/Extra.md",
     "2026/Extra/Img/Es.04.png",
     "2026/Extra/Img/Es.03.png",
     "2026/Extra/Img/Es.02.png",
     "2026/Extra/Img/Es.01.png",
     "2026/wireshark-analisi-rete/Img/Es01.04.png",
-    "2026/wireshark-analisi-rete/Img/Es01.03.png",
     "Senza nome.md",
     "2025/WebSocket_Chat/node_modules/engine.io/node_modules/debug/README.md",
     "screenshot.png.md",
     "().md",
-    "2026/wireshark-analisi-rete/Img/Es01.02.png",
-    "Pasted image 20260310194328.png",
-    "2026/wireshark-analisi-rete/Img/Es01.01.png",
-    "2026/wireshark-analisi-rete/Es01.01.png",
     "Test.md",
     "2026/wireshark-analisi-rete/Test.md",
     "2025/WebSocket_Chat/node_modules/component-bind/History.md"
