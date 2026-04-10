@@ -18,7 +18,7 @@
                 "page": 36,
                 "left": -16,
                 "top": 449,
-                "zoom": 0.966674107142857
+                "zoom": 0.9666741071428571
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -214,13 +214,13 @@
   },
   "active": "832a7f5c2e6ec3ac",
   "lastOpenFiles": [
-    "2026/Web/web-webservices.pdf",
-    "2026/Web/Soluzioni.md",
     "2026/Socket/Lab-ApplicazioniReteSocket.pdf",
+    "2026/Web/Soluzioni.md",
+    "2026/Socket/Soluzioni.md",
+    "2026/Web/web-webservices.pdf",
     "2026/Web/web/fileCopy.c",
     "2026/Socket/client-server/bin/provaincollata.txt",
     "2026/Socket/client-server/bin/prova.txt",
-    "2026/Socket/Soluzioni.md",
     "2026/Web/web/esempio-parser",
     "2026/Web/web/esempio-parser.c",
     "2026/Web/web/css.html",
