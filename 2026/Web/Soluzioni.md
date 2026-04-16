@@ -89,5 +89,9 @@ Priority: u=0, i
 fname=David&lname=Zahariev
 ```
 ### [[2026/Web/web-webservices.pdf#page=36&selection=2,0,2,9&color=note|Esercizio]]
-Modifiche fatte a [[2026/Web/web/serverHTTP.c|serverHTTP.c]]. Il suo funzionamento è: nell'URL cerca e invia con protocollo HTTP il nome del file che viene dopo `/`. Esempio: `localhost:8000/css.html`, il server restituisce la pagina `css.html` caricandola nel browser.
-Se provo a chiedere le pagine form-get.html e form-post.html vengono restituite tranquillamente.
+Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTPGET.c|serverHTTPGET.c]]. Il suo funzionamento è: nell'URL cerca e invia con protocollo HTTP il nome del file che viene dopo `/`. 
+Esempio: `localhost:8000/css.html`, il server restituisce la pagina `css.html` caricandola nel browser.
+Se provo a chiedere le pagine form-get.html e form-post.html vengono restituite tranquillamente nel browser.
+
+### [[2026/Web/web-webservices.pdf#page=37&selection=2,0,2,18&color=note|Esercizio per casa]]
+Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTPPOST.c|serverHTTPPOST.c]]. 

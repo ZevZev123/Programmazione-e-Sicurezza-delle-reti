@@ -6,10 +6,15 @@ int main(){
     char *HTMLHeader = "HTTP/1.1 200 OK\r\n\r\n";
 
     socketif_t sockfd;
-    
-    sockfd = createTCPServer(8000);
+    int port = 8000;
+
+    sockfd = createTCPServer(port);
     if (sockfd < 0) return -1;
     
+    printf("Il server e' avviato sul seguente URL:\n");
+    printf("http://127.0.0.1:%d\n",port);
+    fflush(stdout);
+
     while(true) {
         FILE *connfd = acceptConnectionFD(sockfd);
         char request[MTU], path_buffer[256] = {0};
