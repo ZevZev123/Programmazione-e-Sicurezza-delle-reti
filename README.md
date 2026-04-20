@@ -25,11 +25,11 @@ Le soluzioni: [Soluzioni.md](2026/Web/Soluzioni.md)
 
 ### Extra
 Durante le esericitazioni sono state segnate definizioni per ripassare e togliere eventuali dubbi.<br>
-Il documento è [Extra.md](Extra/Entra.md) al quale vengono effettuati collegamenti tramite obsidian.
+Il documento è [Extra.md](Extra/Entra.md) al quale vengono effettuati collegamenti tramite obsidian nei file Soluzioni.md .
 
 ### Appunti
 Nella cartella [Appunti lezioni](appunti_lezioni) sono presenti appunti presi sul tablet (Zev).<br>
-Non sono presenti molte cose, per un ripasso di argomenti specifici meglio vedere resto.
+Non sono presenti molte cose, per un ripasso di argomenti specifici meglio vedere la parte [Extra](#Extra).
 
 ## 2025
 Sono presenti tutti i documenti presenti nel moodle del corso dell'anno precendete (24/25).
