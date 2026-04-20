@@ -16,9 +16,9 @@
               "state": {
                 "file": "2026/Web/web-webservices.pdf",
                 "page": 35,
-                "left": -20,
-                "top": 109,
-                "zoom": 0.8041443452380951
+                "left": -16,
+                "top": 113,
+                "zoom": 0.9666741071428571
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -103,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -213,6 +214,7 @@
   },
   "active": "832a7f5c2e6ec3ac",
   "lastOpenFiles": [
+    "2026/Web/web/serverHTTP[GET]",
     "2026/Web/web/serverHTTP[GET,POST]",
     "2026/Web/web/serverHTTP[GET,POST].c",
     "2026/Web/web/serverHTTP[GET].c",
@@ -224,7 +226,6 @@
     "2026/Web/web/serverHTTPPOST",
     "2026/Web/Soluzioni.md",
     "2026/Web/web/serverHTTPPOST.c",
-    "2026/Web/web/serverHTTPGET",
     "2026/Socket/Soluzioni.md",
     "2026/Web/Img/wireshark-02.png",
     "2026/Web/Img/wireshark-01.png",

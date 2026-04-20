@@ -89,9 +89,34 @@ Priority: u=0, i
 fname=David&lname=Zahariev
 ```
 ### [[2026/Web/web-webservices.pdf#page=36&selection=2,0,2,9&color=note|Esercizio]]
-Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTPGET.c|serverHTTPGET.c]]. Il suo funzionamento è: nell'URL cerca e invia con protocollo HTTP il nome del file che viene dopo `/`. 
+Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTP[GET].c|serverHTTP[GET].c]]. Il suo funzionamento è: nell'URL cerca e invia con protocollo HTTP il nome del file che viene dopo `/`. 
 Esempio: `localhost:8000/css.html`, il server restituisce la pagina `css.html` caricandola nel browser.
 Se provo a chiedere le pagine form-get.html e form-post.html vengono restituite tranquillamente nel browser.
 
 ### [[2026/Web/web-webservices.pdf#page=37&selection=2,0,2,18&color=note|Esercizio per casa]]
-Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTPPOST.c|serverHTTPPOST.c]]. 
+Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTP[GET,POST].c|serverHTTP[GET,POST].c]]. Il codice funziona sia con le richieste GET che quelle POST. E' presente hardcode per la pagina con il form nella quale si può richiedere una pagina presente nella cartella di esecuzione. A differenza di serverHTTP[GET].c è presente una funzione:
+```c
+// Funzione per condividere il contenuto di un file carattere per carattere
+int share_file_content(const char *filename, FILE *connfd) {
+	FILE *fptr = fopen(filename, "r");
+	if (fptr == NULL) {
+		perror("Errore nell'apertura del file");
+		share_file_content("error.html",connfd);
+		return -1;
+	}
+	char *HTMLHeader = "HTTP/1.1 200 OK\r\n\r\n";
+	fputs(HTMLHeader, connfd);
+	  
+	char c;
+	while ((c = fgetc(fptr)) != EOF) {
+		if (fputc(c, connfd) == EOF) {
+			perror("Errore nella scrittura sul socket");
+			fclose(fptr);
+			return -1;
+		}
+	}
+	fclose(fptr);
+	return 0;
+}
+```
+in modo che non ci sia bisogno di salvare all'interno del codice c nessun <code style="color: #abb2bf;"><span style="color: #e5c07b;">char</span> <span style="color: #56b6c2;">*pagina</span>;</code> 
