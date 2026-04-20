@@ -15,10 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "2026/Web/web-webservices.pdf",
-                "page": 36,
-                "left": -16,
-                "top": 118,
-                "zoom": 0.966674107142857
+                "page": 35,
+                "left": -20,
+                "top": 109,
+                "zoom": 0.8041443452380951
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -103,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -212,20 +211,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "1df63a5774bdb2fb",
+  "active": "832a7f5c2e6ec3ac",
   "lastOpenFiles": [
+    "2026/Web/web/serverHTTP[GET,POST]",
+    "2026/Web/web/serverHTTP[GET,POST].c",
+    "2026/Web/web/serverHTTP[GET].c",
+    "2026/Web/web/error.html",
+    "2026/Web/web-webservices.pdf",
     "2026/Web/web/styles.css",
     "2026/Web/web/action",
     "2026/Web/web/form-post-1.html",
     "2026/Web/web/serverHTTPPOST",
     "2026/Web/Soluzioni.md",
-    "2026/Web/web-webservices.pdf",
     "2026/Web/web/serverHTTPPOST.c",
     "2026/Web/web/serverHTTPGET",
-    "2026/Web/web/serverHTTPGET.c",
-    "2026/Web/web/serverHTTP copy.c",
-    "2026/Web/Esempi-web/serverHTTP1.c",
-    "2026/Web/Esempi-web/serverHTTP[GET e POST].c",
     "2026/Socket/Soluzioni.md",
     "2026/Web/Img/wireshark-02.png",
     "2026/Web/Img/wireshark-01.png",

@@ -1,7 +1,7 @@
 #include "network.h"
 
 int main(){
-    char *HTMLDefault = "HTTP/1.1 200 OK\r\n\r\n<html><head><title>An Example Page</title></head><body><h3>Cerca nella URL un file</h3><br>La scelta attuale non esiste</html>\r\n";
+    char *HTMLDefault = "HTTP/1.1 200 OK\r\n\r\n<html><head><title>An Example Page</title></head><body><h3>Cerca nella URL un file</h3>La scelta attuale non esiste</html>\r\n";
     char *HTMLError = "HTTP/1.1 200 OK\r\n\r\n<html><body>La pagina che cerchi non esiste</body></html>";
     char *HTMLHeader = "HTTP/1.1 200 OK\r\n\r\n";
 
