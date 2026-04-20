@@ -15,12 +15,17 @@ Primi esercizi in c sulle socket. Particolare interesse verso i protocolli di tr
 Alcuni esercizi non sono risolti per richiesta di molteplici computer.<br>
 Principale suddivisione:
 - [Esermpi-client-server](2026/Socket/Esempi-client-server): contiene i file originali presi da moodle
-- [client-server](2026/Socket/client-server): contiene i file modificati per le esercitazioni
+- [client-server](2026/Socket/client-server): contiene i file modificati per le esercitazioni<br>
+
 Le soluzioni: [Soluzioni.md](2026/Socket/Soluzioni.md)
 
 ### Web
 Codici scritti in c (socket TCP) per la condivisione di pagine web in html con css e js.<br>
-... altro
+Principale suddivisione:
+- [Esempi-web](2026/Web/Esempi-web): contiene i file originali presi da moodle
+- [web](2026/Web/web): contiene i file modificati per le esercitazioni<br>
+
+... altro<br>
 Le soluzioni: [Soluzioni.md](2026/Web/Soluzioni.md)
 
 ### Extra
