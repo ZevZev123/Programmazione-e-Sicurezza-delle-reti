@@ -92,7 +92,6 @@ fname=David&lname=Zahariev
 Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTP[GET].c|serverHTTP[GET].c]]. Il suo funzionamento è: nell'URL cerca e invia con protocollo HTTP il nome del file che viene dopo `/`. 
 Esempio: `localhost:8000/css.html`, il server restituisce la pagina `css.html` caricandola nel browser.
 Se provo a chiedere le pagine form-get.html e form-post.html vengono restituite tranquillamente nel browser.
-
 ### [[2026/Web/web-webservices.pdf#page=37&selection=2,0,2,18&color=note|Esercizio per casa]]
 Modifiche fatte da serverHTTP.c a [[2026/Web/web/serverHTTP[GET,POST].c|serverHTTP[GET,POST].c]]. Il codice funziona sia con le richieste GET che quelle POST. E' presente hardcode per la pagina con il form nella quale si può richiedere una pagina presente nella cartella di esecuzione. A differenza di serverHTTP[GET].c è presente una funzione:
 ```c
@@ -120,5 +119,28 @@ int share_file_content(const char *filename, FILE *connfd) {
 }
 ```
 in modo che non ci sia bisogno di salvare all'interno del codice c nessun <code style="color: #abb2bf;"><span style="color: #e5c07b;">char</span> <span style="color: #56b6c2;">*pagina</span>;</code> 
-
 ### [[2026/Web/web-webservices.pdf#page=39&selection=2,0,4,16&color=note|Esempio di web server esteso con gestione CGI]]
+Analisi del file [[2026/Web/web/serverHTTP-CGI.c|serverHTTP-CGI.c]].
+La pagina [[2026/Web/web/sommatrice-web.html|sommatrice-web.html]] si presenta in questo modo:
+<p style="text-align:center;"><img src="Img/page-01.png" alt="page-01.png" width="300"/></p>
+La somma funziona sia con numeri interi, che negativi, che decimali.
+Nella funziona <code>void sommatrice</code>
+```c
+void sommatrice(char *url, FILE *out) {
+	char *function, *op1, *op2;
+	float somma, val1, val2;
+	
+	function = strtok(url, "?&");
+	op1 = strtok(NULL, "?&");
+	op2 = strtok(NULL, "?&");
+	strtok(op1,"=");
+	val1 = atof(strtok(NULL,"="));
+	strtok(op2,"=");
+	val2 = atof(strtok(NULL,"="));
+	
+	somma = val1 + val2;
+	
+	fprintf(out,"HTTP/1.1 200 OK\r\n\r\n<html><head><title>Risultato</title></head><body>Risultato=%f</body></html>\r\n\r\n", somma);
+}
+```
+il secondo parametro è la connessione (nel main connfd) ed è usata per "stampare" l'output, ovvero crea una pagina browser con il risultato della somma.
