@@ -120,3 +120,5 @@ int share_file_content(const char *filename, FILE *connfd) {
 }
 ```
 in modo che non ci sia bisogno di salvare all'interno del codice c nessun <code style="color: #abb2bf;"><span style="color: #e5c07b;">char</span> <span style="color: #56b6c2;">*pagina</span>;</code> 
+
+### [[2026/Web/web-webservices.pdf#page=39&selection=2,0,4,16&color=note|Esempio di web server esteso con gestione CGI]]
