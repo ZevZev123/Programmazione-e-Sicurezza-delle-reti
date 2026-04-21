@@ -125,6 +125,7 @@ La pagina [[2026/Web/web/sommatrice-web.html|sommatrice-web.html]] si presenta i
 <p style="text-align:center;"><img src="Img/page-01.png" alt="page-01.png" width="300"/></p>
 La somma funziona sia con numeri interi, che negativi, che decimali.
 Nella funziona <code>void sommatrice</code>
+
 ```c
 void sommatrice(char *url, FILE *out) {
 	char *function, *op1, *op2;
@@ -144,3 +145,6 @@ void sommatrice(char *url, FILE *out) {
 }
 ```
 il secondo parametro è la connessione (nel main connfd) ed è usata per "stampare" l'output, ovvero crea una pagina browser con il risultato della somma.
+
+### [[2026/Web/web-webservices.pdf#page=45&selection=2,0,2,23&color=note|Esercizio su Web Socket]]
+Realizzazione di una chat eseguita dentro un browser web.
