@@ -37,7 +37,7 @@ int main(){
         }
         
         if(strstr(url, "calcola-somma")==NULL)  {
-            fprintf(connfd,"HTTP/1.1 200 OK\r\n\r\n{\r\n    Funzione non riconosciuta!\r\n}\r\n");
+            fprintf(connfd,"HTTP/1.1 200 OK\r\n\r\n{\r\n    URL_accettato: localhost:8000/calcola-somma?var1=num1?var2=num2\r\n}\r\n");
         }
         else {
             printf("Chiamata a funzione sommatrice\n");

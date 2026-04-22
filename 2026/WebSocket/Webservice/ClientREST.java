@@ -5,7 +5,7 @@ class ClientREST
 {    
     public static void main(String args[])
     {
-        RESTAPI service1=new RESTAPI("127.0.0.1");
+        RESTAPI service1 = new RESTAPI("127.0.0.1");
 
         if(args.length < 3)    {
             System.out.println("USAGE: java ClientREST tipofunzione op1 op2");
@@ -27,11 +27,12 @@ class RESTAPI
     float calcolaSomma(float val1, float val2)  {
 
         URL u = null;
-        float risultato=0;
+        float risultato = 0;
         int i;
 
         try 
         { 
+            // u = URI.create("http://" + server + ":8000/calcola-somma?param1=" + val1 + "&param2=" + val2).toURL();       // per evitare il warning con java 20+
             u = new URL("http://"+server+":8000/calcola-somma?param1="+val1+"&param2="+val2);
             System.out.println("URL aperto: " + u);
         }
