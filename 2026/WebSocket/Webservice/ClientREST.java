@@ -11,7 +11,10 @@ class ClientREST
             System.out.println("USAGE: java ClientREST tipofunzione op1 op2");
         }   
         else if(args[0].equals("calcola-somma")) {
-            System.out.println("Risultato: " + service1.calcolaSomma(Float.parseFloat(args[1]), Float.parseFloat(args[2])));
+            service1.calcolaSomma(Float.parseFloat(args[1]), Float.parseFloat(args[2]));
+        }
+        else if(args[0].equals("numeri-primi")) {
+            service1.numeriPrimi(Integer.parseInt(args[1]), Integer.parseInt(args[2]));
         }
     }
 }
@@ -24,42 +27,48 @@ class RESTAPI
         server = new String(remoteServer);
     }
 
-    float calcolaSomma(float val1, float val2)  {
-
+    void calcolaSomma(float val1, float val2)  {
         URL u = null;
-        float risultato = 0;
-        int i;
 
-        try 
-        { 
-            // u = URI.create("http://" + server + ":8000/calcola-somma?param1=" + val1 + "&param2=" + val2).toURL();       // per evitare il warning con java 20+
-            u = new URL("http://"+server+":8000/calcola-somma?param1="+val1+"&param2="+val2);
+        try { 
+            u = URI.create("http://" + server + ":8000/calcola-somma?param1=" + val1 + "&param2=" + val2).toURL();       // per evitare il warning con java 20+
+            // u = new URL("http://"+server+":8000/calcola-somma?param1="+val1+"&param2="+val2);
             System.out.println("URL aperto: " + u);
+            conn(u);
         }
-        catch (MalformedURLException e) 
-        {
+        catch (MalformedURLException e) {
             System.out.println("URL errato: " + u);
         }
+    }    
 
-        try 
-        {
+    void numeriPrimi(int min, int max) {
+        URL u = null;
+
+        try { 
+            u = URI.create("http://" + server + ":8000/numeri-primi?min=" + min + "&max=" + max).toURL();       // per evitare il warning con java 20+
+            // u = new URL("http://"+server+":8000/numeri-primi?min="+min+"&max="+max);
+            System.out.println("URL aperto: " + u);
+            conn(u);
+        }
+        catch (MalformedURLException e) {
+            System.out.println("URL errato: " + u);
+        }
+    }
+
+    void conn(URL u) {
+        try {
             URLConnection c = u.openConnection();
             c.connect();
             BufferedReader b = new BufferedReader(new InputStreamReader(c.getInputStream()));
             System.out.println("Lettura dei dati...");
             String s;
             while( (s = b.readLine()) != null ) {
+                // legge riga per riga il messaggio di ritorno dal server
                 System.out.println(s);
-                if((i = s.indexOf("somma"))!=-1)
-                    risultato = Float.parseFloat(s.substring(i+7));
             }
         }
-        catch (IOException e) 
-        {
+        catch (IOException e) {
             System.out.println(e.getMessage());
         }
-    
-        return (float)risultato;
-    }    
-
+    }
 }

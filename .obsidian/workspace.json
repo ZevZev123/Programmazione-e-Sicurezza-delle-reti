@@ -6,7 +6,7 @@
       {
         "id": "06d38cad9ae2685d",
         "type": "tabs",
-        "dimension": 57.356076759061835,
+        "dimension": 49.733475479744136,
         "children": [
           {
             "id": "203d7cb7b91c2cad",
@@ -17,8 +17,8 @@
                 "file": "2026/WebSocket/web-webservices.pdf",
                 "page": 21,
                 "left": -19,
-                "top": 54,
-                "zoom": 0.8050892857138545
+                "top": 29,
+                "zoom": 0.8324925595233635
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -29,7 +29,7 @@
       {
         "id": "130a02d713594b33",
         "type": "tabs",
-        "dimension": 42.643923240938165,
+        "dimension": 50.266524520255864,
         "children": [
           {
             "id": "e7549b57fe0472a7",
@@ -102,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -210,21 +211,22 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "203d7cb7b91c2cad",
+  "active": "e7549b57fe0472a7",
   "lastOpenFiles": [
-    "2026/WebSocket/Soluzioni.md",
     "2026/WebSocket/web-webservices.pdf",
-    "2026/WebSocket/Webservice/RESTAPI.class",
-    "2026/WebSocket/Webservice/ClientREST.class",
+    "2026/WebSocket/Soluzioni.md",
     "2026/Web/Soluzioni.md",
-    "2026/WebSocket/Img/ws-01.png",
-    "2026/WebSocket/Img",
-    "2026/WebSocket/Webservice/clientREST-GET",
+    "2026/Web/web/serverHTTP.c.md",
     "2026/WebSocket/Webservice/serverHTTP-REST",
-    "2026/WebSocket/web-webservices-46-74.pdf",
-    "2026/WebSocket/Websocket.pdf",
-    "2026/Web/web-webservices.pdf",
+    "2026/WebSocket/Webservice/network.h",
+    "2026/WebSocket/Webservice/network.c",
+    "2026/WebSocket/Webservice/prime-number-interval.c",
+    "2026/WebSocket/Webservice/ClientREST.java",
     "2026/WebSocket/Webservice/serverHTTP-REST.c",
+    "2026/WebSocket/Webservice",
+    "2026/WebSocket/Esempi-Webservice/serverHTTP-REST.c",
+    "2026/WebSocket/Esempi-Webservice/serverHTTP-REST",
+    "2026/WebSocket/Img/ws-01.png",
     "2026/Web/Esempi-web.md",
     "README.md",
     "2026/wireshark-analisi-rete/Soluzioni.md",

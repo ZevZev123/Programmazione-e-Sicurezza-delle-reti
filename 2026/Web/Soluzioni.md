@@ -20,7 +20,7 @@ tags:
 </html>
 ```
 ### [[2026/Web/web-webservices.pdf#page=29&selection=2,0,2,22&color=note|Un semplice web server]]
-Se provo ad avviare [[2026/Web/web/serverHTTP.c|serverHTTP]] su due terminali diversi il secondo non si avvia perché il server è TCP e, come detto nei capitoli precedenti la porta è già occupata dal primo server.
+Se provo ad avviare [[2026/Web/Esempi-web/serverHTTP.c|serverHTTP]] su due terminali diversi il secondo non si avvia perché il server è TCP e, come detto nei capitoli precedenti la porta è già occupata dal primo server.
 Quando faccio `http://127.0.0.1:8000/` sul browser mi compare la pagina bianca con scritto `Hello World, this is a very simple HTML document.`.
 Sul terminale invece esce questo:
 ```
@@ -41,7 +41,7 @@ NB: L'indirizzo è il path del file e non un URL
 <p style="text-align:center;"><code>file:///home/.../web/form-get.html</code></p>
 All'invio del form viene aperta una pagina nuova con URL:
 <p style="text-align:center;"><code>http://localhost:8000/action?fname=David&lname=Zahariev</code></p>
-ovvero la pagina localhost che viene caricata da [[2026/Web/web/serverHTTP.c|serverHTTP]] con attributi `fname` e `lname` impostati a `David Zahariev`.
+ovvero la pagina localhost che viene caricata da [[2026/Web/Esempi-web/serverHTTP.c|serverHTTP]] con attributi `fname` e `lname` impostati a `David Zahariev`.
 Seguendo il flusso TCP di Wireshark vediamo:
 <p style="text-align:center;"><img src="Img/wireshark-01.png" alt="wireshark-01.png" width="600"/></p>
 In formato testuale:
@@ -118,7 +118,7 @@ int share_file_content(const char *filename, FILE *connfd) {
 	return 0;
 }
 ```
-in modo che non ci sia bisogno di salvare all'interno del codice c nessun <code style="color: #abb2bf;"><span style="color: #e5c07b;">char</span> <span style="color: #56b6c2;">*pagina</span>;</code> 
+in modo che non ci sia bisogno di salvare all'interno del codice c nessun <code style="color: #abb2bf;"><span style="color: #e5c07b;">char *</span><span style="color: #56b6c2;">pagina</span>;</code> 
 ### [[2026/Web/web-webservices.pdf#page=39&selection=2,0,4,16&color=note|Esempio di web server esteso con gestione CGI]]
 Analisi del file [[2026/Web/web/serverHTTP-CGI.c|serverHTTP-CGI.c]].
 La pagina [[2026/Web/web/sommatrice-web.html|sommatrice-web.html]] si presenta in questo modo:
