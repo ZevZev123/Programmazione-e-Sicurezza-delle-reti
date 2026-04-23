@@ -157,6 +157,7 @@ Il tempo di esecuzione utilizzando il comando:
 Executed in     24.49 secs                      fish        external
 usr time             1.94 secs    827.00 micros      1.94 secs
 sys time             0.16 secs         0.00 micros      0.16 secs
+**risultato stampato a video
 
 L'algoritmo dei numeri primi non è stato tradotto in Java. Il client java chiede al server di farlo che poi gli restituisce i risultati.
 

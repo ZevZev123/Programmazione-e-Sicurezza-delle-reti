@@ -15,9 +15,9 @@
               "type": "pdf",
               "state": {
                 "file": "2026/WebSocket/web-webservices.pdf",
-                "page": 21,
+                "page": 22,
                 "left": -19,
-                "top": 29,
+                "top": 149,
                 "zoom": 0.8324925595233635
               },
               "icon": "lucide-file-text",
@@ -214,6 +214,7 @@
   "active": "e7549b57fe0472a7",
   "lastOpenFiles": [
     "2026/WebSocket/web-webservices.pdf",
+    "2026/WebSocket/Webservice/ClientThreadREST.java",
     "2026/WebSocket/Soluzioni.md",
     "2026/Web/Soluzioni.md",
     "2026/Web/web/serverHTTP.c.md",

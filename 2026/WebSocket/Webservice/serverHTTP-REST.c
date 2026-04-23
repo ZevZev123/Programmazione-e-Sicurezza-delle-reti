@@ -3,13 +3,23 @@
 float calcolaSomma(float, float);
 void numeriPrimi(int min, int max, FILE *connfd);
 
-int main(){
+int main(int argc, char **argv){
     socketif_t sockfd;
     FILE* connfd;
-    int res, i, port = 8000;
+    int res, i, port;
     long length=0;
     char request[MTU], url[MTU], method[10], c;
-    
+
+    if (argc >= 2) {
+        port = atoi(argv[1]);
+        if (port <= 0 || port > 65535) {
+            printf("Porta non valida, uso il default 8000\n");
+            port = 8000;
+        }
+    } else {
+        port = 8000;
+    }
+
     sockfd = createTCPServer(port);
     if (sockfd < 0){
         printf("[SERVER] Errore: %i\n", sockfd);
