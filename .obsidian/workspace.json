@@ -17,8 +17,8 @@
                 "file": "2026/WebSocket/web-webservices.pdf",
                 "page": 22,
                 "left": -19,
-                "top": 149,
-                "zoom": 0.8324925595233635
+                "top": 156,
+                "zoom": 0.8324925595233637
               },
               "icon": "lucide-file-text",
               "title": "web-webservices"
@@ -213,6 +213,8 @@
   },
   "active": "e7549b57fe0472a7",
   "lastOpenFiles": [
+    "2026/WebSocket/Webservice/serverHTTP-REST-3.c",
+    "2026/WebSocket/Webservice/serverHTTP-REST copy.c",
     "2026/WebSocket/web-webservices.pdf",
     "2026/WebSocket/Webservice/ClientThreadREST.java",
     "2026/WebSocket/Soluzioni.md",
@@ -225,8 +227,6 @@
     "2026/WebSocket/Webservice/ClientREST.java",
     "2026/WebSocket/Webservice/serverHTTP-REST.c",
     "2026/WebSocket/Webservice",
-    "2026/WebSocket/Esempi-Webservice/serverHTTP-REST.c",
-    "2026/WebSocket/Esempi-Webservice/serverHTTP-REST",
     "2026/WebSocket/Img/ws-01.png",
     "2026/Web/Esempi-web.md",
     "README.md",

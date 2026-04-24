@@ -154,11 +154,65 @@ Le differenze tra la funzione `calcola somma` e `numeri primi` sono l'url di con
 Il tempo di esecuzione utilizzando il comando:
 <p style="text-align:center;"><code>time java ClientREST.java numeri-primi 1 1000000</code></p>
 è:
-Executed in     24.49 secs                      fish        external
-usr time             1.94 secs    827.00 micros      1.94 secs
-sys time             0.16 secs         0.00 micros      0.16 secs
-**risultato stampato a video
+
+``` text
+Executed in     24.49 secs             fish       external
+usr time         1.94 secs    827.00 micros      1.94 secs
+sys time         0.16 secs      0.00 micros      0.16 secs
+```
+<small>**Con risultato stampato a video**</small>
 
 L'algoritmo dei numeri primi non è stato tradotto in Java. Il client java chiede al server di farlo che poi gli restituisce i risultati.
-
 ### [[2026/WebSocket/web-webservices.pdf#page=23&selection=2,0,2,16&color=note|Esercizio finale]]
+Per usare 3 macchine diverse quello che dobbiamo modificare sono gli indirizzi IP. Assumiamo di lavorare in locale e quindi di utilizzare indirizzi IP all'interno del NAT:
+```java
+RESTAPI service1 = new RESTAPI("192.168.1.10", args[0], args[1], args[2]);
+RESTAPI service2 = new RESTAPI("192.168.1.11", args[0], args[1], args[2]);
+RESTAPI service3 = new RESTAPI("192.168.1.12", args[0], args[1], args[2]);
+```
+Non c'è bisogno di modificare il server, finché riceve la richiesta HTTP corretta lui risponde.
+
+**Numeri primi con Thread**
+E' stato modificato il main di [[2026/WebSocket/Webservice/clientThreadREST.java|clientThreadREST.java]] per poter gestire i vari casi e :
+```java
+else if (args[0].equals("numeri-primi")) {
+	int min = Integer.parseInt(args[1]);
+	int max = Integer.parseInt(args[2]);
+	int range = max - min;
+	
+	if (range < 100000) {
+		RESTAPI service = new RESTAPI("127.0.0.1", 8000, args[0], args[1], args[2]);
+		service.start();
+	}
+	else {
+		int step = range / 3;
+		
+		// Calcolo i tre intervalli
+		String min1 = String.valueOf(min);
+		String max1 = String.valueOf(min + step);
+		
+		String min2 = String.valueOf(min + step + 1);
+		String max2 = String.valueOf(min + 2 * step);
+		
+		String min3 = String.valueOf(min + 2 * step + 1);
+		String max3 = String.valueOf(max); // L'ultimo arriva fino al max originale
+		
+		// Assegno i range specifici a ogni server
+		RESTAPI service1 = new RESTAPI("127.0.0.1", 8000, args[0], min1, max1);
+		RESTAPI service2 = new RESTAPI("127.0.0.1", 8001, args[0], min2, max2);
+		RESTAPI service3 = new RESTAPI("127.0.0.1", 8002, args[0], min3, max3);
+		
+		service1.start();
+		service2.start();
+		service3.start();
+	}
+}
+```
+Così facendo vengono usati i tre processi server sullo stesso PC (indirizzo ip localhost) però anche lavorando sullo stesso PC, lavorano in contemporanea e la prova sta nei tempi di esecuzione:
+```text
+Executed in   13.81 secs           fish     external
+   usr time    2.44 secs    0.00 millis    2.44 secs
+   sys time    0.18 secs    1.25 millis    0.18 secs
+```
+<small>**Con risultato stampato a video**</small>
+Comparando i due risultati la differenza (24.49 - 13.81 = ) 10.68 secs in meno, ovvero circa il 43.6% in meno.
