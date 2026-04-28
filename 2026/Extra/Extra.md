@@ -63,3 +63,10 @@ Il DNS (Domain Name System) è un protocollo che permette di trasformare un domi
 # ICMP
 
 # Loopback
+
+# PUB/SUB
+**Non è un protocollo** ma un modo.
+Le due entità principali:
+- Publisher -> si comporta come il client
+- Subscriber -> si comporta con il server
+- Broker -> entità di intermezzo che comunica con i due
