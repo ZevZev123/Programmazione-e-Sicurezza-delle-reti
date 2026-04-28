@@ -18,3 +18,5 @@ Con l'opzione `--retain` il messaggio viene salvato nel buffer, infatti quando p
 3. Per avere entrambe le temperature su un terminale solo si aggiunge questo al comando:
 <p style="text-align:center;">... -t temp1 -t temp2 -v</p>
 dove `temp1` e `temp2` sono le due stanze e `-v` ci permette di vedere da dove quale publisher arrivano le informazioni.
+<p style="text-align:center;"><img src="Img/terminale-02.png" alt="terminale-02.png" width="600"/></p>
+4. 
