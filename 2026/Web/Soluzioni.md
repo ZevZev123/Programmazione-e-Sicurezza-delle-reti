@@ -147,4 +147,4 @@ void sommatrice(char *url, FILE *out) {
 il secondo parametro è la connessione (nel main connfd) ed è usata per "stampare" l'output, ovvero crea una pagina browser con il risultato della somma.
 
 ### [[2026/Web/web-webservices.pdf#page=45&selection=2,0,2,23&color=note|Esercizio su Web Socket]]
-Realizzazione di una chat eseguita dentro un browser web.
+#### Esercizio 0
