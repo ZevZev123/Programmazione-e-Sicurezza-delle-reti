@@ -14,7 +14,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2026/MQTT/Pub-sub.pdf"
+                "file": "2026/MQTT/Pub-sub.pdf",
+                "page": 21,
+                "left": -16,
+                "top": 113,
+                "zoom": 0.9581696428571428
               },
               "icon": "lucide-file-text",
               "title": "Pub-sub"
@@ -33,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026/MQTT/Soluzioni.md",
+                "file": "2026/Extra/Extra.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Soluzioni"
+              "title": "Extra"
             }
           }
         ]
@@ -211,8 +215,8 @@
   },
   "active": "2d1cc063410c2680",
   "lastOpenFiles": [
-    "2026/MQTT/Pub-sub.pdf",
     "2026/MQTT/Soluzioni.md",
+    "2026/MQTT/Pub-sub.pdf",
     "2026/WebSocket/Soluzioni.md",
     "2026/MQTT/Img/terminale-03.png",
     "2026/MQTT/Img/terminale-02.png",
