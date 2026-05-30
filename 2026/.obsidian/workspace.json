@@ -4,39 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e83169b29c10cae8",
+        "id": "8c5e93154deda368",
         "type": "tabs",
         "children": [
           {
-            "id": "27abe0428dd5d41a",
+            "id": "055930d76e3b830e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "WebSocket/Websocket.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Websocket"
-            }
-          }
-        ]
-      },
-      {
-        "id": "3aee68d709d7a6ce",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6fec4ecf0a00fa1e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web/Soluzioni.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Soluzioni"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -96,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "cc65438b8a839a2e",
@@ -199,10 +176,14 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "6fec4ecf0a00fa1e",
+  "active": "055930d76e3b830e",
   "lastOpenFiles": [
-    "WebSocket/Websocket.pdf",
+    "wireshark-analisi-rete/Soluzioni.md",
+    "MQTT/Soluzioni.md",
+    "Socket/Soluzioni.md",
+    "WebSocket/Soluzioni.md",
     "Web/Soluzioni.md",
+    "WebSocket/Websocket.pdf",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/src/common.js",
     "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/node.js",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/src/node.js",
@@ -212,7 +193,6 @@
     "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/index.js",
     "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/debug.js",
     "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/browser.js",
-    "Web/WebSocket_Chat/node_modules/socket.io/node_modules/debug/src/node.js",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/ms/readme.md",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/ms/license.md",
     "Web/WebSocket_Chat/node_modules/supports-color/node_modules/has-flag/readme.md",
@@ -233,9 +213,6 @@
     "Web/WebSocket_Chat/node_modules/send/node_modules/ms/readme.md",
     "Web/WebSocket_Chat/node_modules/send/node_modules/ms/license.md",
     "Web/WebSocket_Chat/node_modules/nodemon/node_modules/supports-color/readme.md",
-    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/semver/README.md",
-    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/semver/CHANGELOG.md",
-    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/ms/readme.md",
-    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/ms/license.md"
+    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/semver/README.md"
   ]
 }
