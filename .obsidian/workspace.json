@@ -4,45 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fb9a7008c634857e",
+        "id": "a099b07dd5802cba",
         "type": "tabs",
-        "dimension": 56.82302771855011,
         "children": [
           {
-            "id": "1b33dae8ef82cab4",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2026/MQTT/Pub-sub.pdf",
-                "page": 21,
-                "left": -16,
-                "top": 113,
-                "zoom": 0.9581696428571428
-              },
-              "icon": "lucide-file-text",
-              "title": "Pub-sub"
-            }
-          }
-        ]
-      },
-      {
-        "id": "baacdc5aa8290f39",
-        "type": "tabs",
-        "dimension": 43.17697228144989,
-        "children": [
-          {
-            "id": "2d1cc063410c2680",
+            "id": "909934343b9d0da4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026/Extra/Extra.md",
+                "file": "2026/Conf-apparati-rete/Soluzioni.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Extra"
+              "title": "Soluzioni"
             }
           }
         ]
@@ -102,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -213,32 +188,40 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2d1cc063410c2680",
+  "active": "909934343b9d0da4",
   "lastOpenFiles": [
-    "2026/MQTT/Soluzioni.md",
-    "2026/MQTT/Pub-sub.pdf",
-    "2026/WebSocket/Soluzioni.md",
-    "2026/MQTT/Img/terminale-03.png",
-    "2026/MQTT/Img/terminale-02.png",
-    "2026/MQTT/Img/terminale-01.png",
-    "2026/MQTT/Img/terminale_01.png",
-    "2026/MQTT/Img",
-    "2026/Socket/Soluzioni.md",
+    "2026/Conf-apparati-rete/Img/Image4.6.png",
+    "2026/Conf-apparati-rete/Img/Image4.5.png",
+    "2026/Conf-apparati-rete/Img/Image4.4.png",
+    "2026/Conf-apparati-rete/Img/Image4.1.png",
+    "2026/Conf-apparati-rete/Img/Image4.3.png",
+    "2026/Conf-apparati-rete/Img/Image4.2.png",
+    "2026/Conf-apparati-rete/Img/Image4.png",
+    "2026/Conf-apparati-rete/Packet Tracer Saves/2 vlan.pkt~",
+    "2026/Conf-apparati-rete/Packet Tracer Saves/2 lan.pkt~",
+    "2026/Conf-apparati-rete/Packet Tracer Saves/4 pc 3 switch.pkt~",
+    "2026/Conf-apparati-rete/Img/Image3.png",
+    "2026/Conf-apparati-rete/Img/Image2.1.png",
+    "2026/Conf-apparati-rete/Img/Image2.2.png",
     "2026/Extra/Extra.md",
-    "2026/MQTT/mosquitto_win64.zip",
-    "2026/WebSocket/Websocket.pdf",
+    "2026/Conf-apparati-rete/Soluzioni.md",
+    "2026/Conf-apparati-rete/Img/Image2.png",
+    "2026/Conf-apparati-rete/Img",
+    "2026/Conf-apparati-rete/Packet Tracer Saves/4 pc 3 switch.pkt",
+    "2026/Conf-apparati-rete/Packet Tracer Saves/2 vlan.pkt",
+    "2026/Conf-apparati-rete/Packet Tracer Saves/2 lan.pkt",
+    "2026/Conf-apparati-rete/Packet Tracer Saves",
+    "2026/Packet Tracer Saves/2 vlan.pkt~",
+    "2026/MQTT/Pub-sub.pdf",
+    "2026/MQTT/Soluzioni.md",
+    "2026/WebSocket/Soluzioni.md",
+    "2026/Socket/Soluzioni.md",
     "2026/Web/Soluzioni.md",
-    "2026/Web/web-webservices.pdf",
     "2026/wireshark-analisi-rete/Soluzioni.md",
     "Senza nome.canvas",
     "2026/WebSocket/WebSocket_Chat/node_modules/type-fest/readme.md",
     "2025/WebSocket_Chat/node_modules/express/Readme.md",
     "2026/WebSocket/WebSocket_Chat/node_modules/express/Readme.md",
-    "2026/WebSocket/web-webservices.pdf",
-    "2026/MQTT/Esempio-mosquitto/devel/mqtt_protocol.h",
-    "2026/MQTT/Esempio-mosquitto/devel/mosquittopp.lib",
-    "2026/MQTT/Esempio-mosquitto/devel/mosquitto_plugin.h",
-    "2026/MQTT/Esempio-mosquitto/devel/mosquitto.lib",
     "2026/MQTT/Esempio-mosquitto/README.md",
     "2026/MQTT/Esempio-mosquitto/README-letsencrypt.md",
     "2026/MQTT/Esempio-mosquitto/NOTICE.md",
@@ -247,19 +230,12 @@
     "2026/MQTT/mosquitto/NOTICE.md",
     "2026/Web/Esempi-web.md",
     "2026/Web/web/serverHTTP.c.md",
-    "2026/WebSocket/Img/ws-01.png",
     "README.md",
-    "2026/Web/Img/page-01.png",
-    "2026/Web/Img/wireshark-02.png",
-    "2026/Web/Img/wireshark-01.png",
-    "2026/Web/wireshark-01.png",
-    "2026/Web/wireshark-02.png",
     "client-server/serverUPD_inc.c.md",
     "Senza nome.md",
     "2025/WebSocket_Chat/node_modules/engine.io/node_modules/debug/README.md",
     "screenshot.png.md",
     "().md",
-    "Test.md",
-    "2026/wireshark-analisi-rete/Test.md"
+    "Test.md"
   ]
 }
