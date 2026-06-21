@@ -39,5 +39,4 @@ Non sono presenti molte cose, per un ripasso di argomenti specifici meglio veder
 ## 2025
 Sono presenti tutti i documenti presenti nel moodle del corso dell'anno precendete (24/25).
 
-- [ ] Concludere la parte Web
 - [ ] Aggiungere i tag corretti per tutti i file su obsidian

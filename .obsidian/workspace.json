@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "5d95f560e88f4d5c",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "51b39b9bad8e9caf",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2026/Web/web-webservices.pdf",
-                "page": 1,
-                "zoom": 1
-              },
-              "icon": "lucide-file-text",
-              "title": "web-webservices"
-            }
-          }
-        ]
-      },
-      {
         "id": "079e59b4df956682",
         "type": "tabs",
         "children": [
@@ -31,14 +11,12 @@
             "id": "fca3071983e20836",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2026/Web/Soluzioni.md",
-                "mode": "source",
-                "source": false
+                "file": "2026/01 ripasso reti.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Soluzioni"
+              "icon": "lucide-file-text",
+              "title": "01 ripasso reti"
             }
           }
         ]
@@ -201,20 +179,23 @@
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "bases:Crea nuova Base": false,
-      "obsidian-git:Open Git source control": false,
-      "pdf-plus:PDF++: Toggle auto-copy": false,
-      "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "bases:Crea nuova Base": false
     }
   },
-  "active": "51b39b9bad8e9caf",
+  "active": "fca3071983e20836",
   "lastOpenFiles": [
     "2026/06_crittografia.pdf",
-    "2026/Web/web-webservices.pdf",
+    "2026/07_integrita_autenticazione-ridotto.pdf",
+    "2026/9_IDS_Firewall.pdf",
+    "2026/9_SSL_PGP_Wireless.pdf",
+    "2026/schema-firewall.pdf",
+    "2026/Schema-pratico-autenticazione-client-server.pdf",
     "2026/Web/Soluzioni.md",
-    "2026/WebSocket/web-webservices.pdf",
-    "2026/WebSocket/Websocket.pdf",
+    "2026/01 ripasso reti.pdf",
+    "2026/schemi-protocolli-sicurezza.pdf",
+    "2026/05_sicurezza_intro.pdf",
+    "2026/03 cavi ST-VLAN.pdf",
+    "README.md",
     "2026/WebSocket/Soluzioni.md",
     "2026/wireshark-analisi-rete/Soluzioni.md",
     "2026/Extra/Extra.md",
@@ -227,16 +208,9 @@
     "2026/Conf-apparati-rete/Img/Image4.3.png",
     "2026/Conf-apparati-rete/Img/Image4.2.png",
     "2026/Conf-apparati-rete/Img/Image4.png",
-    "2026/Conf-apparati-rete/Packet Tracer Saves/2 vlan.pkt~",
-    "2026/Conf-apparati-rete/Packet Tracer Saves/2 lan.pkt~",
-    "2026/Conf-apparati-rete/Packet Tracer Saves/4 pc 3 switch.pkt~",
     "2026/Conf-apparati-rete/Img/Image3.png",
     "2026/Conf-apparati-rete/Img/Image2.1.png",
     "2026/Conf-apparati-rete/Img/Image2.2.png",
-    "2026/Conf-apparati-rete/Img",
-    "2026/Conf-apparati-rete/Packet Tracer Saves/4 pc 3 switch.pkt",
-    "2026/Conf-apparati-rete/Packet Tracer Saves/2 vlan.pkt",
-    "2026/Conf-apparati-rete/Packet Tracer Saves/2 lan.pkt",
     "2026/Socket/Soluzioni.md",
     "Senza nome.canvas",
     "2026/WebSocket/WebSocket_Chat/node_modules/type-fest/readme.md",
@@ -250,7 +224,6 @@
     "2026/MQTT/mosquitto/NOTICE.md",
     "2026/Web/Esempi-web.md",
     "2026/Web/web/serverHTTP.c.md",
-    "README.md",
     "client-server/serverUPD_inc.c.md",
     "Senza nome.md",
     "2025/WebSocket_Chat/node_modules/engine.io/node_modules/debug/README.md",
