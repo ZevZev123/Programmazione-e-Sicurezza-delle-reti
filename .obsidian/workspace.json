@@ -4,16 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "a099b07dd5802cba",
+        "id": "5d95f560e88f4d5c",
         "type": "tabs",
         "children": [
           {
-            "id": "909934343b9d0da4",
+            "id": "51b39b9bad8e9caf",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2026/Web/web-webservices.pdf",
+                "page": 1,
+                "zoom": 1
+              },
+              "icon": "lucide-file-text",
+              "title": "web-webservices"
+            }
+          }
+        ]
+      },
+      {
+        "id": "079e59b4df956682",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fca3071983e20836",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026/Conf-apparati-rete/Soluzioni.md",
+                "file": "2026/Web/Soluzioni.md",
                 "mode": "source",
                 "source": false
               },
@@ -53,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Soluzioni",
+                "query": "tag:#Soluzioni  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,8 +208,18 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "909934343b9d0da4",
+  "active": "51b39b9bad8e9caf",
   "lastOpenFiles": [
+    "2026/06_crittografia.pdf",
+    "2026/Web/web-webservices.pdf",
+    "2026/Web/Soluzioni.md",
+    "2026/WebSocket/web-webservices.pdf",
+    "2026/WebSocket/Websocket.pdf",
+    "2026/WebSocket/Soluzioni.md",
+    "2026/wireshark-analisi-rete/Soluzioni.md",
+    "2026/Extra/Extra.md",
+    "2026/MQTT/Soluzioni.md",
+    "2026/Conf-apparati-rete/Soluzioni.md",
     "2026/Conf-apparati-rete/Img/Image4.6.png",
     "2026/Conf-apparati-rete/Img/Image4.5.png",
     "2026/Conf-apparati-rete/Img/Image4.4.png",
@@ -203,21 +233,11 @@
     "2026/Conf-apparati-rete/Img/Image3.png",
     "2026/Conf-apparati-rete/Img/Image2.1.png",
     "2026/Conf-apparati-rete/Img/Image2.2.png",
-    "2026/Extra/Extra.md",
-    "2026/Conf-apparati-rete/Soluzioni.md",
-    "2026/Conf-apparati-rete/Img/Image2.png",
     "2026/Conf-apparati-rete/Img",
     "2026/Conf-apparati-rete/Packet Tracer Saves/4 pc 3 switch.pkt",
     "2026/Conf-apparati-rete/Packet Tracer Saves/2 vlan.pkt",
     "2026/Conf-apparati-rete/Packet Tracer Saves/2 lan.pkt",
-    "2026/Conf-apparati-rete/Packet Tracer Saves",
-    "2026/Packet Tracer Saves/2 vlan.pkt~",
-    "2026/MQTT/Pub-sub.pdf",
-    "2026/MQTT/Soluzioni.md",
-    "2026/WebSocket/Soluzioni.md",
     "2026/Socket/Soluzioni.md",
-    "2026/Web/Soluzioni.md",
-    "2026/wireshark-analisi-rete/Soluzioni.md",
     "Senza nome.canvas",
     "2026/WebSocket/WebSocket_Chat/node_modules/type-fest/readme.md",
     "2025/WebSocket_Chat/node_modules/express/Readme.md",

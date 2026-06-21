@@ -1,3 +1,7 @@
+---
+tags:
+  - Soluzioni
+---
 # Packet Tracer
 
 ### [[2026/Conf-apparati-rete/Packet Tracer Saves/4 pc 3 switch.pkt|4 PC 3 SWITCH]]

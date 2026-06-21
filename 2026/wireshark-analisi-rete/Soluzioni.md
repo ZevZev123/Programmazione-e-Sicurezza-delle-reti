@@ -1,6 +1,5 @@
 ---
 tags:
-  - Wireshark-analisi-rete
   - Soluzioni
 ---
 ### [[2026/wireshark-analisi-rete/analisi-rete.pdf#page=13&selection=6,0,6,11&color=note|Esercizio 1]]
