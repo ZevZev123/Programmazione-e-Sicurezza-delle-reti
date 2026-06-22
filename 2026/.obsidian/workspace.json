@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8c5e93154deda368",
+        "id": "00e63c9ad0fff530",
         "type": "tabs",
         "children": [
           {
-            "id": "055930d76e3b830e",
+            "id": "9a1ebc89118b22c9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Conf-apparati-rete/Soluzioni.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Soluzioni"
             }
           }
         ]
@@ -176,8 +180,18 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "055930d76e3b830e",
+  "active": "9a1ebc89118b22c9",
   "lastOpenFiles": [
+    "Conf-apparati-rete/PacketTracerSaves/wan.pkt~",
+    "Conf-apparati-rete/PacketTracerSaves/wan.backup.pkt",
+    "Conf-apparati-rete/PacketTracerSaves/wan - Copia.pkt",
+    "Conf-apparati-rete/Esercizi_con_NetSimK.pdf",
+    "Conf-apparati-rete/Soluzioni.md",
+    "05_sicurezza_intro.pdf",
+    "06_crittografia.pdf",
+    "07_integrita_autenticazione-ridotto.pdf",
+    "9_IDS_Firewall.pdf",
+    "9_SSL_PGP_Wireless.pdf",
     "wireshark-analisi-rete/Soluzioni.md",
     "MQTT/Soluzioni.md",
     "Socket/Soluzioni.md",
@@ -185,14 +199,6 @@
     "Web/Soluzioni.md",
     "WebSocket/Websocket.pdf",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/src/common.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/node.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/src/node.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/src/browser.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/src/index.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/debug/dist/debug.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/index.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/debug.js",
-    "Web/WebSocket_Chat/node_modules/socket.io-client/node_modules/debug/src/browser.js",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/ms/readme.md",
     "Web/WebSocket_Chat/node_modules/socket.io-parser/node_modules/ms/license.md",
     "Web/WebSocket_Chat/node_modules/supports-color/node_modules/has-flag/readme.md",
@@ -211,8 +217,6 @@
     "Web/WebSocket_Chat/node_modules/socket.io/node_modules/ms/readme.md",
     "Web/WebSocket_Chat/node_modules/socket.io/node_modules/ms/license.md",
     "Web/WebSocket_Chat/node_modules/send/node_modules/ms/readme.md",
-    "Web/WebSocket_Chat/node_modules/send/node_modules/ms/license.md",
-    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/supports-color/readme.md",
-    "Web/WebSocket_Chat/node_modules/nodemon/node_modules/semver/README.md"
+    "Web/WebSocket_Chat/node_modules/send/node_modules/ms/license.md"
   ]
 }
