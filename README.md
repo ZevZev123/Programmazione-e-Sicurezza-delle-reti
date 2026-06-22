@@ -33,7 +33,7 @@ Programmazione di web-services con java e c.
 Principale suddivisione:
 * [Esempi-Webservice](2026/WebSocket/Esempi-Webservice): contiene i file originali da moodle
 * [Webservice](2026/WebSocket/Webservice): contiene i file modificati per le esercitazioni
-* [WebSocket_Chat](2026/Websocket/WebSocket_Chat): contiene codici usati per l'applicazione di chatting
+* [WebSocket_Chat](2026/WebSocket/WebSocket_Chat): contiene codici usati per l'applicazione di chatting
 
 Le soluzioni: [Soluzioni.md](2026/WebSocket/Soluzioni.md)
 ### Conf-apparati-rete
