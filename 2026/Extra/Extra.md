@@ -3,18 +3,28 @@
 Il PDU è composto da Header e payload
 
 # Metodi di trasmissione
-La trasmissione avviene sempre da un solo mittente<br>**UNICAST**         = 1 destinatario
-**MULTICAST**    = gruppo di destinatari
-**BROADCAST**   = tutti i destinatari della rete
+La trasmissione avviene sempre da un solo mittente
+<br>**UNICAST**         = 1 destinatario<br>**MULTICAST**    = gruppo di destinatari<br>**BROADCAST**   = tutti i destinatari della rete
+
+# Web-Services
+I WebServices sono sistemi software progettati per far comunicare due macchine o applicazioni senza *intervento umano*. In pratica permettono la condivisione di dati eliminando limitazioni di **macchina**, grazie alla possibilità di collegamento tramite il web, e di **linguaggio di programmazione**, ovvero non importa il linguaggio di programmazione utilizzato per creare il codice su cui si basano i processi.
+
+# REST
+(*REpresentional State Transfer*)
+E' uno **stile architetturale**, ovvero un insieme di regole e linee guida su come progettare web-services semplici, veloci e scalabili.
+**RESTful** è come viene chiamato un web-service che segue queste proprietà.
+
+Parole chiave importanti:
+- **Risorse ->** Basato sulle risorse
+- **Stateless ->** Il server non deve ricordarsi nulla delle richieste precedenti
+- **Rappresentazione standard ->** Rappresentazione della risorsa, tipicamente in json
 
 # Well-known ports
-**80** = HTTP
-**53** = [[#DNS]] 
-**443** = HTTPS
-**67 / 68** = [[#DHCP]]
+**80** = HTTP<br>**53** = [[#DNS]] <br>**443** = HTTPS<br>**67 / 68** = [[#DHCP]]
+
 # ARP
 (*Address Resolution Protocol*)
-ARP è un protocollo di mappatura utilizzato a <u>livello DATA-LINK</u> (MAC) e <u>NETWORK</u> (IP) che serve per ottenere l'indirizzo MAC di un host partendo dal suo IP.
+<br>ARP è un protocollo di mappatura utilizzato a <u>livello DATA-LINK</u> (MAC) e <u>NETWORK</u> (IP) che serve per ottenere l'indirizzo MAC di un host partendo dal suo IP.
 
 *Come funziona?*
 Una macchina host manda un pacchetto in **broadcast** (MAC destinatario ff:ff:ff:ff:ff:ff) con i propri dati (indirizzo IP e MAC) e chiede chi ha un determinato IP.
@@ -46,27 +56,35 @@ Il DNS è un protocollo che permette di trasformare un dominio (google.it) in un
 <p style="text-align:center;"><img src="Img/Es.02.png" alt="Es.02.png" width="600"></p>
 *Header risposta*
 <p style="text-align:center;"><img src="Img/Es.03.png" alt="Es.03.png" width="600"></p>
-*Transaction ID* = numero casuale identificativo, quando un client riceve una risposta sa a quale domanda si riferisce
-*Flags*:
+<b>Transaction ID</b> = numero casuale identificativo, quando un client riceve una risposta sa a quale domanda si riferisce
+<br><b>Flags</b>:
 - Query/response -> se è una domanda 0, se è una risposta 1
-- Recursion desired -> chiedi a qualcun'altro se non sai rispondere 1, dimmi a chi chiedere se non sai rispondere 0
-*Authoritative nameservers* = quali server sono "proprietari" ufficiali del dominio
-*Additional records* = informazioni utili (IP server autoritativi)
+<br>- Recursion desired -> chiedi a qualcun'altro se non sai rispondere 1, dimmi a chi chiedere se non sai rispondere 0
+<br><b>Authoritative nameservers</b> = quali server sono "proprietari" ufficiali del dominio
+<br><b>>Additional records</b> = informazioni utili (IP server autoritativi)
 
 # DHCP
 (*Dynamic Host Configuration Protocol*)
-E' un protocollo di rete che assegna automaticamente un indirizzo IP, subnet mask, gateway e [[#DNS]]. 
-Passaggi di funzionamento:
+<br>E' un protocollo di rete che assegna automaticamente un indirizzo IP, subnet mask, gateway e [[#DNS]]. 
+<br>Passaggi di funzionamento:
 - Il dispositivo invia una richiesta broadcast per **trovare un server DHCP**;
 - Il server DHCP riceve la richiesta e **propone un indirizzo IP** libero;
 - Il dispositivo **accetta l'indirizzo IP**;
 - Il server conferma l'avvenuta assegnazione (con lease time -> tempo di affitto).
 
 **Automatico =** Collegamenti senza intervento manuale.
-**Prevenzione =** Evita potenziali errori di assegnazione accidentale.
-**Ottimizzazione =** Recupera e assegna automaticamente gli indirizzi IP.
+<br>**Prevenzione =** Evita potenziali errori di assegnazione accidentale.
+<br>**Ottimizzazione =** Recupera e assegna automaticamente gli indirizzi IP.
 
 **NB:** Il messaggio di broadcast inviato dal nuovo dispositivo usa come indirizzo sorgente `0.0.0.0` e come destinazione `255.255.255.255`. Per la verificazione del dispositivo viene inviato anche il MAC.
+
+# LAN
+
+# WAN
+
+# VLAN
+(*Virtual Local Area Network*)
+
 # TCP
 (*Transmission Control Protocol*)
 Il TCP è un protocollo di livello trasporto. Garantisce una trasmissione di dati:
@@ -86,6 +104,7 @@ ICMP è un protocollo a livello rete (livello 3). Viene utilizzato per:
 - **Test di connettività =** Protocollo usato dal comando `ping`.
 
 ICMP è un protocollo che non usa le porte.
+
 # Loopback
 I pacchetti loopback sono segnali o dati che vengono rispediti direttamente al mittente originale senza alcuna elaborazione intermedia.
 Vengono principalmente usati per testare hardware, diagnosticare guasti, configurare indirizzi logici stabili e prevenire anomalie di rete.

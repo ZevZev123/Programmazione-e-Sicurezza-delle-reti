@@ -2,6 +2,7 @@
 tags:
   - Soluzioni
 ---
+Info per il capitolo [[Extra#Web-Services|Web-Services]] / [[Extra#REST|REST]]
 ### [[2026/WebSocket/web-webservices.pdf#page=18&selection=2,0,2,9&color=note|Esercizio]]
 Per usare [[2026/Websocket/Esempi-Webservice/serverHTTP-REST.c|serverHTTP-REST.c]] l'url da usare è strutturato in questo modo:
 <p style="text-align:center;"><code>http://localhost:8000/calcola-somma?param1=<span style="color: #d19a66;">num1</span>&amp;param2=<span style="color: #d19a66;">num2</span></code></p>
