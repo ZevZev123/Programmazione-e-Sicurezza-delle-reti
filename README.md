@@ -40,7 +40,7 @@ Le soluzioni: [Soluzioni.md](2026/WebSocket/Soluzioni.md)
 Esercizi di Packet Tracer / NetSimK. 
 Principale suddivisione:
 * [packetTracer](2026/Conf-apparati-rete/packetTracer): contiene i file pkt originali da moodle
-* [Packet Tracer Saves](2026/Conf-apparati-rete/Packet Tracer Saves): contiene i file creati durante le lezioni ed esercitazioni
+* [Packet Tracer Saves](2026/Conf-apparati-rete/PacketTracerSaves): contiene i file creati durante le lezioni ed esercitazioni
 
 Le soluzioni: [Soluzioni.md](2026/Conf-apparati-rete/Soluzioni.md)
 
