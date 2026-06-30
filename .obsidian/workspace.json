@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "81704039b0a6b726",
@@ -191,8 +190,11 @@
   },
   "active": "fca3071983e20836",
   "lastOpenFiles": [
-    "2026/Conf-apparati-rete/PacketTracerSaves/wan.pkt~",
     "2026/Extra/Extra.md",
+    "2026/MQTT/Soluzioni.md",
+    "2026/Socket/Soluzioni.md",
+    "2026/Conf-apparati-rete/Soluzioni.md",
+    "2026/Conf-apparati-rete/PacketTracerSaves/wan.pkt~",
     "README.md",
     "2026/Conf-apparati-rete/PacketTracerSaves/wan.pkt",
     "2026/Conf-apparati-rete/PacketTracerSaves/4 pc 3 switch.pkt",
@@ -204,7 +206,6 @@
     "2026/WebSocket/web-webservices.pdf",
     "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/debug/src/node.js",
     "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/debug/src/index.js",
-    "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/debug/src/common.js",
     "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/ms/readme.md",
     "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/ms/license.md",
     "2026/WebSocket/WebSocket_Chat/node_modules/supports-color/node_modules/has-flag/readme.md",
@@ -225,8 +226,6 @@
     "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/debug/README.md",
     "2026/WebSocket/WebSocket_Chat/node_modules/socket.io/node_modules/debug/CHANGELOG.md",
     "2026/WebSocket/WebSocket_Chat/node_modules/nodemon/node_modules/supports-color/readme.md",
-    "2026/WebSocket/WebSocket_Chat/node_modules/nodemon/node_modules/debug/README.md",
-    "2026/WebSocket/WebSocket_Chat/node_modules/nodemon/node_modules/debug/CHANGELOG.md",
     "2026/Conf-apparati-rete/Img/Image5.png",
     "2026/Conf-apparati-rete/Img/Image4.0.png",
     "2026/Conf-apparati-rete/Img/Image4.6.png",
